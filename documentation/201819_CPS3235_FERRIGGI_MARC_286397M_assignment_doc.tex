@@ -16,17 +16,7 @@
 %Parameters
 \onehalfspacing
 \renewcommand\thesection{\arabic{section}} %change numbering style of sections
-%\titleformat{\section}[block]
-%	{\fontsize{12}{15}\bfseries}
-%	{\thesection}
-%	{1em}
-%	{}
-%\titleformat{\subsection}[hang]
-%	{\fontsize{12}{15}\bfseries}
-%	{\thesubsection}
-%	{1em}
-%	{}
-%\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+
 
 \begin{document}
 	\pagenumbering{roman}
@@ -70,20 +60,21 @@
 	
 	\par The data collected is simply the \textit{html} code used to display the web page. This is available to anyone that has access to the website, thus anyone can have access to this data given the page was accessed on the specified date. Since anyone can book a classified advert on \textit{Times of Malta}, there is no guarantee that the information is correct or accurate, thus we cannot be certain that the prices of the properties listed on the classified page reflect the true market value of property in Malta set by experts in the field. However, this could still give us a good indication of the trend. 
 	
-	\par With regards to data quality, the data provided is not complete as not all listings have information on the area of the house, whether or not the house has a garage or information on the type of property. However, from glancing at the raw data, it would seem that all entries (apart from the ads) have data on the location and price of the property. Since the data is extracted from the same system it must be consistent. Finally, when doing a study on the current property situation in Malta, data from 2015, 2016 or even 2017 will not be relevant or timely as the property marked has changed drastically in these past years in Malta. 
+	\par With regards to data quality, the data provided is not complete as not all listings have information on the area of the house, whether or not the house has a garage or information on the type of property. However, from glancing at the raw data, it would seem that all entries have data on the location and price of the property. Since the data is extracted from the same system it must be consistent. Finally, when doing a study on the current property situation in Malta, data from 2015, 2016 or even 2017 will not be relevant or timely as the property marked has changed drastically in these past years in Malta. 
 	
 	\subsection{Features of Interest}
-	\paragraph{ }The features of interest from the raw data were extracted with the task in mind of building a predictive model that would predict the expected price of the property given several features.
+	\paragraph{ }The features of interest from the raw data were extracted with the task in mind of building a predictive model that would predict the expected price of the property given several features. Thus a sample was chosen from the provided dataset, in particular data from the beginning of August, September and October was chosen since these would reflect most accurately the current prices in the property market. 
 	\begin{itemize}
 		\item \underline{Property ID}: This will be extracted from the \textit{name} variable in the \textit{html} code in order to have a unique ID referencing each entry.
 		\item \underline{Location}: This categorical variable will store the location of the property. Since the price of property depends on the location, this would make a good predictor for the model.
 		\item \underline{Property Type}: Another categorical variable which lists the type of property for sale. The categories are the following: house, penthouse, maisonette, apartment, farmhouse, villa, house of character, block or unknown.
 		\item \underline{Plot Area}: This continuous quantitative variable stores the area of the land in square meters (thus its measured in a ratio scale). The plot area of the land should have a direct effect on the final price of the property, thus it should make a good predictor.
 		\item \underline{Has Pool}: This dichotomous variable takes a value of 1 if the property listed has a pool and 0 otherwise.
-		\item \underline{Has Garage}: This categorical variable has 3 categories; yes, no and optional.
+		\item \underline{Has Garage}: This categorical variable has 3 categories; yes (1), no (0) and optional (2).
 	\end{itemize}
 
 	\subsection{Feature Extraction}
+	\paragraph{ }The data was extracted from the provided \textit{html} files by using the \textit{Python} package \textit{Beautiful Soup}. Once the property listings were found, the features were extracted using regular expressions or python's string manipulation libraries. The data in the location category was then arranged to ensure there's only 1 category per location. Finally, the duplicated entries were dropped, leaving a total of 1422 unique entries.
 	
 	\pagebreak
 \end{document}

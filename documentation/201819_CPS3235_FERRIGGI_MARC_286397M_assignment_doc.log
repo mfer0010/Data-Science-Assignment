@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  2 JAN 2019 15:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  2 JAN 2019 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -87,18 +87,18 @@ Package caption Info: float package is loaded.
 (./201819_CPS3235_FERRIGGI_MARC_286397M_assignment_doc.aux)
 \openout1 = `201819_CPS3235_FERRIGGI_MARC_286397M_assignment_doc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -167,7 +167,7 @@ Package caption Info: End \AtBeginDocument code.
 <UoMLogo.png, id=1, 1204.5pt x 395.4775pt>
 File: UoMLogo.png Graphic file (type png)
  <use UoMLogo.png>
-Package pdftex.def Info: UoMLogo.png used on input line 48.
+Package pdftex.def Info: UoMLogo.png used on input line 38.
 (pdftex.def)             Requested size: 253.49762pt x 83.22772pt.
  [1
 
@@ -188,18 +188,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ] [1
 
 ]
-Overfull \hbox (15.16374pt too wide) in paragraph at lines 64--64
+Overfull \hbox (15.16374pt too wide) in paragraph at lines 54--54
 []\OT1/cmr/bx/n/17.28 Data Ex-trac-tion and Vi-su-al-iza-tion - EU Stats 
  []
 
 [2] [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 68.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
- [4]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
+ [4] [5]
 
 Package caption Warning: Unused \captionsetup[table] on input line 14.
 See the caption package documentation for explanation.
@@ -208,7 +208,7 @@ See the caption package documentation for explanation.
 Here is how much of TeX's memory you used:
  2675 strings out of 494910
  42737 string characters out of 6179835
- 97710 words of memory out of 5000000
+ 98710 words of memory out of 5000000
  5956 multiletter control sequences out of 15000+600000
  9453 words of font info for 33 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -219,11 +219,11 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti12.pfb>
-Output written on 201819_CPS3235_FERRIGGI_MARC_286397M_assignment_doc.pdf (6 pa
-ges, 116673 bytes).
+Output written on 201819_CPS3235_FERRIGGI_MARC_286397M_assignment_doc.pdf (7 pa
+ges, 119060 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
