@@ -1,0 +1,813 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]>
+<html lang="en-GB" class="ie6">
+<![endif]-->
+<!--[if IE 7 ]>
+<html lang="en-GB" class="ie7">
+<![endif]-->
+<!--[if IE 8 ]>
+<html lang="en-GB" class="ie8">
+<![endif]-->
+<!--[if IE 9 ]>
+<html lang="en-GB" class="ie9">
+<![endif]-->
+<!--[if IE 10 ]>
+<html lang="en-GB" class="ie10">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!--><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" xmlns:article="http://ogp.me/ns/article#">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(e,t){function n(){}function r(e){function t(e){return e&&e instanceof n?e:e?a(e,i,o):o()}function s(n,r,o){e&&e(n,r,o);for(var i=t(o),a=l(n),u=a.length,f=0;u>f;f++)a[f].apply(i,r);var s=c[w[n]];return s&&s.push([h,n,r,i]),i}function p(e,t){g[e]=l(e).concat(t)}function l(e){return g[e]||[]}function d(e){return f[e]=f[e]||r(s)}function v(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in c||(c[t]=[])})}var g={},w={},h={on:p,emit:s,get:d,listeners:l,context:t,buffer:v};return h}function o(){return new n}var i="nr@context",a=e("gos"),u=e(1),c={},f={},s=t.exports=r();s.backlog=c},{1:12,gos:"7eSDFh"}],ee:[function(e,t){t.exports=e("QJf3ax")},{}],3:[function(e,t){function n(e,t){return function(){r(e,[(new Date).getTime()].concat(i(arguments)),null,t)}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit"],u=["addPageAction"],c="api-";o(a,function(e,t){newrelic[t]=n(c+t,"api")}),o(u,function(e,t){newrelic[t]=n(c+t)}),t.exports=newrelic,newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),r("err",[e,(new Date).getTime()])}},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,t){t.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,t){function n(e,t,n){if(r.call(e,t))return e[t];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[t]=o,o}var r=Object.prototype.hasOwnProperty;t.exports=n},{}],handle:[function(e,t){t.exports=e("D5DuLP")},{}],D5DuLP:[function(e,t){function n(e,t,n,o){r.buffer([e],o),r.emit(e,t,n)}var r=e("ee").get("handle");t.exports=n,n.ee=r},{ee:"QJf3ax"}],XL7HBI:[function(e,t){function n(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");t.exports=n},{gos:"7eSDFh"}],id:[function(e,t){t.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,t){function n(){if(!v++){var e=d.info=NREUM.info,t=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&t){u(p,function(t,n){e[t]||(e[t]=n)});var n="https"===s.split(":")[0]||e.sslForHttp;d.proto=n?"https://":"http://",a("mark",["onload",i()],null,"api");var r=f.createElement("script");r.src=d.proto+e.agent,t.parentNode.insertBefore(r,t)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()],null,"api")}function i(){return(new Date).getTime()}var a=e("handle"),u=e(1),c=window,f=c.document;NREUM.o={ST:setTimeout,XHR:c.XMLHttpRequest,REQ:c.Request,EV:c.Event,PR:c.Promise,MO:c.MutationObserver},e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-885.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),d=t.exports={offset:i(),origin:s,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()],null,"api");var v=0},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,t){t.exports=e("G9z0Bl")},{}],12:[function(e,t){function n(e,t){var n=[],o="",i=0;for(o in e)r.call(e,o)&&(n[i]=t(o,e[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;t.exports=n},{}],13:[function(e,t){function n(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(0>o?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=n},{}]},{},["G9z0Bl"]);</script>
+<meta property="og:site_name" content="Times of Malta"/>
+<meta property="fb:app_id" content="356697991023219"/>
+<meta property="og:image" content="https://cdn-attachments.timesofmalta.com/default-article-image.png"/>
+<link rel="image_src" href="https://cdn-attachments.timesofmalta.com/default-article-image.png"/>
+<link href="/favicon.ico?1" type="image/x-icon" rel="icon"/><link href="/favicon.ico?1" type="image/x-icon" rel="shortcut icon"/> <link rel="stylesheet" type="text/css" href="/min/main.css?v=310"/>
+<!--[if lt IE 9]>
+			<link rel="stylesheet" type="text/css" href="/min/ie.css?v=310" />		<![endif]-->
+<!--[if IE 6]>
+			<link rel="stylesheet" type="text/css" href="/min/ie6.css?v=310" />		<![endif]-->
+<link rel="stylesheet" type="text/css" href="/min/main.css?v=310"/><link rel="stylesheet" type="text/css" href="/min/global.css?v=310"/><link rel="stylesheet" type="text/css" href="/css/../js/vendors/jquery-cookiebar/jquery.cookiebar.css"/><link rel="stylesheet" type="text/css" href="/min/print.css?v=310" media="print"/>
+<link href="/rss" rel="alternate" type="application/rss+xml" title="Times of Malta Feed"/>
+<script type="text/javascript">
+	<!--
+	var TOM = {};
+	TOM.widgets = {};
+	TOM.baseUrl = "http://www.timesofmalta.com/";
+	TOM.domainUrl = "http://timesofmalta.com";
+	TOM.relativeUrl = "/";
+	TOM.imageUrl = TOM.relativeUrl + "img/";
+	TOM.jsUrl = TOM.relativeUrl + "js/";
+	TOM.cssUrl = TOM.relativeUrl + "css/";
+	TOM.minUrl = "/min/";
+	TOM.videos = {};
+	TOM.audio = {};
+	TOM.debug = false;
+	TOM.assetVersion = "310";
+	TOM.widgets = {};
+	TOM.contentIsPremium = 0;
+	TOM.jwPlayerUrl = "https://content.jwplatform.com/libraries/dsmEoHbp.js";
+	TOM.vastTagUrl = "http://pubads.g.doubleclick.net/gampad/ads?sz=620x348&iu=/15876412/VideoPreroll&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast3&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
+	TOM.facebookAppId = "356697991023219";
+	TOM.googleLoginClientId = "1090966291850-85bba9o2erjo76tpcmuqmn110k8o3u0c.apps.googleusercontent.com";
+	TOM.takeOverAdvert = false;
+	TOM.popUpVideoAdvertName = false;
+	TOM.popUpVideoAdvertUrl = false;
+	TOM.popUpVideoTargetUrl = false;
+
+	
+		TOM.minifyMap = {"a":["e45","73f","8b5",190,"2ee","3e4","46d"],"b":[471,"e4e","cff","d79","33e"],"c":["66c","e29"],"d":["f4c","e64","fb1","2c0"],"e":["69c"],"f":["ed0",503],"h":["8d2"],"i":["af9","b64"],"j":[778],"m":["fad"],"n":["2ae"],"o":["dc9"],"q":["a47"],"s":["b49",994]}	
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+	var gads = document.createElement('script');
+	gads.async = true;
+	gads.type = 'text/javascript';
+	var useSSL = 'https:' == document.location.protocol;
+	gads.src = (useSSL ? 'https:' : 'http:') +
+	'//www.googletagservices.com/tag/js/gpt.js';
+	var node = document.getElementsByTagName('script')[0];
+	node.parentNode.insertBefore(gads, node);
+	})();
+	
+			googletag.cmd.push(function() {
+				googletag.defineSlot('/15876412/Leaderboard', [728, 90], 'div-gpt-ad-1344004379057-0')
+			.addService(googletag.pubads())
+			.setTargeting('keyword','classified');
+		googletag.defineSlot('/15876412/Rectangular-Bottom', [300, 250], 'div-gpt-ad-1344004379057-3')
+			.addService(googletag.pubads())
+			.setTargeting('keyword','classified');
+		googletag.defineSlot('/15876412/Rectangular-TOP', [300, 250], 'div-gpt-ad-1344004379057-4')
+			.addService(googletag.pubads())
+			.setTargeting('keyword','classified');
+		googletag.defineSlot('/15876412/Skyscraper', [120, 600], 'div-gpt-ad-1344004379057-5')
+			.addService(googletag.pubads())
+			.setTargeting('keyword','classified');
+		googletag.defineSlot('/15876412/ClassicBanner', [620, 75], 'div-gpt-ad-1403279149655-0')
+			.addService(googletag.pubads())
+			.setTargeting('keyword','classified');
+				googletag.pubads().setTargeting('keyword', 'classified');
+		googletag.enableServices();
+	});
+	-->
+</script>
+ 
+<script type="text/javascript">
+<!--
+TOM.userId = 0;
+
+-->
+</script>
+<title>timesofmalta.com - General, sporting, and business news for Malta and the surrounding region</title>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=iw3Fj1aotV00UW" style="display:none" height="1" width="1" alt=""/></noscript>
+<meta name="author" content="Allied Newspapers Ltd">
+<meta name="apple-itunes-app" content="app-id=884947837">
+<meta name="apple-itunes-app-tab" content="app-id=884947837">
+<meta name="google-play-app" content="app-id=com.timesofmalta.timesofmalta">
+<meta name="google-play-app-tab" content="app-id=com.timesofmalta.timesofmalta">
+<meta name="msApplication-ID" content="App"/>
+<meta name="msApplication-TileImage" content="http://wscont1.apps.microsoft.com/winstore/1x/5ee7e1ed-c232-49b6-b3c2-f0ea4c80207a/Icon.411515.png"/>
+<meta name="msApplication-PackageFamilyName" content="AlliedNewspapersLtd.TimesofMalta_xc12w5ay2ynxc"/>
+<meta name="msApplication-WinPhonePackageUrl" content="db003e19-c644-4293-9e36-690a8082570c"/>
+</head>
+<body>
+<div id='theme_background'></div>
+<div id="main_body" class="container_12">
+<div class="ad_skyscraper ad">
+<span>Advert</span>
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-5" style="width:120px; height:600px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-5'); });
+-->
+</script> </div>
+<div id="header">
+<div id="top_most_menu_section">
+<div class="grid_3 text_left">
+<div class="social-media app_badges">
+<div class="addthis_toolbox addthis_default_style">
+<a class="top_app_badge_link" href="/mobileapps">
+<img src="https://cdn-images.timesofmalta.com/store_icons.png" alt="Mobile Apps" title="Mobile Apps" class="top_app_badge"/> </a>
+</div>
+</div>
+<div class="clear"></div> </div>
+<div class="grid_5 text_center">
+<div id="widget_weather" class=" ">
+<span class="widget_weather_date">Monday, March 7, 2016</span>
+<img src="/img/weather/clear.png" alt="clear" class="widget_weather_image"/> <span class="widget_weather_temp">12&deg;C</span>
+<a href="/weather/forecast">[Forecast]</a></div>
+&nbsp;
+</div>
+<div class="grid_4 text_right">
+<a href="/users/login" class="sign_in_link">Sign in</a> or
+<a href="/users/register?location=http%3A%2F%2Fwww.timesofmalta.com%2Fclassifieds%2Fproperty-for-sale&amp;title=Times+Of+Malta" id="register_link">Create your Account</a> <div id="modal_dialog" class="modal_dialog login_form rounded_border">
+<h2>Sign in</h2>
+<div id="modal_flash_message" class="flash_message modal_flash_message"></div>
+<div class="dialog_left_column rounded_border">
+<h3 class="mobile_selector">Use your timesofmalta.com account to login:</h3>
+<form action="/users/login" id="UserLoginFormInlined" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="data[_Token][key]" value="d6d73f5ac5d56350d65f6b604038fca459531120" id="Token2003779571"/></div> <div class="form_row">
+<label for="AccountUsername">Email:</label> <input name="data[Account][username]" type="email" placeholder="Your email" id="user_email" class="validate[required]" maxlength="255"/> <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="form_row">
+<div class="input password"><label for="user_password">Password:</label><input type="password" name="data[Account][password]" id="user_password" class="validate[required]" maxlength="255" placeholder="Your password"/></div> <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="form_row">
+<div id="sign_in_controls">
+</div>
+<span id="sign_in_links" class="mobile_selector">
+<a href="/users/register?location=http%3A%2F%2Fwww.timesofmalta.com%2Fclassifieds%2Fproperty-for-sale&amp;title=Times+Of+Malta">Create your Account</a><br/>
+<b><a href="/users/help">Need help signing in?</a></b>
+</span>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="submit"><input name="login" class="basic_button" id="login" type="submit" value="Sign In"/></div><div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="270ce6d807449af691bbc8c0b63885035c5b4f66%3A" id="TokenFields1074840274"/></div></form> </div>
+<div class="dialog_right_column oauth_ui mobile_selector">
+<h3>Or Sign in with Facebook or Google</h3>
+<div id="oauth_login_error" style="display:none">
+<p></p>
+<input type="button" class="basic_button cta" value="Ok"><div class="clear"></div>
+</div>
+<div id="oauth_login_buttons">
+<img src="/img/login/facebook.png" class="oauth_login" alt="facebook login button" data-service="facebook"/> <img src="/img/login/google.png" class="oauth_login" alt="google logo" data-service="google"/> </div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+<div class="section_divider"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div id="logo_and_banner_section" class="grid_12">
+<a href="/" id="logo_link">Times of malta home</a>
+<div class="ad_leaderboard ad">
+<span>Advert</span>
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-0" style="width:728px; height:90px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-0'); });
+-->
+</script> </div>
+<div class="clear"></div>
+</div>
+<div id="menu_container" class="grid_12">
+<div id="menu_section" class="rounded_border">
+<ul id="menu_items" class="no_js">
+<li class="level_one"><a href="/" class="home_link"></a>
+<ul class="submenu_items no_js">
+<li><a href="/articles/premium">Premium articles</a></li>
+<li><a href="/home/most/popular">Popular stories</a></li>
+<li><a href="/thezone" class="menu_thezone">The Zone</a></li>
+<li><a href="/archive">Digital Archive</a></li>
+<li><a href="/epaper">e-Paper</a></li>
+<li><a href="/premium">Subscribe to Premium</a></li>
+<li><a href="/video-on-demand" class="menu_vod">Video on Demand</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/news" class="first_level_a">News</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/local">National</a></li>
+<li><a href="/sections/view/world">World</a></li>
+<li><a href="/sections/view/social">Social &amp; Personal</a></li>
+<li><a href="/sections/view/education">Education</a></li>
+<li><a href="/sections/view/interview">Interview</a></li>
+<li><a href="/sections/view/environment">Environment</a></li>
+<li><a href="/sections/view/gozo">Gozo</a></li>
+<li><a href="/sections/view/pictures">Pictures</a></li>
+<li><a href="/sections/view/religion">Religion</a></li>
+<li><a href="/videos">Videos</a></li>
+<li><a href="/sections/view/odd-news">Odd News</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/sport" class="first_level_a">Sport</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/football">Football</a></li>
+<li><a href="/sections/view/f1">Formula 1</a></li>
+<li><a href="/sections/view/basketball">Basketball</a></li>
+<li><a href="/sections/view/waterpolo">Waterpolo</a></li>
+<li><a href="/sections/view/horse-racing">Horse Racing</a></li>
+<li><a href="/sections/view/shooting">Shooting</a></li>
+<li><a href="/sections/view/rugby">Rugby</a></li>
+<li><a href="/sections/view/tennis">Tennis</a></li>
+<li><a href="/sections/view/athletics">Athletics</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/business" class="first_level_a">Business</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/business-news">News</a></li>
+<li><a href="/sections/view/business-international">International</a></li>
+<li><a href="/sections/view/business-market-analysis">Market Analysis</a></li>
+<li><a href="/sections/view/business-comment">Comment</a></li>
+<li><a href="/sections/view/technology">Technology</a></li>
+<li><a href="/sections/view/business-features">Features</a></li>
+<li><a href="/sections/view/consumer-affairs">Consumer Affairs</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/comment" class="first_level_a">Comment</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/editorial">Editorial</a></li>
+<li><a href="/sections/view/opinion">Opinion</a></li>
+<li><a href="/sections/view/letters">Letters</a></li>
+<li><a href="/sections/view/blogs">Blogs</a></li>
+<li><a href="/sections/view/cartoons">Cartoons</a></li>
+<li><a href="/sections/view/timestalk" class="menu_timestalk">Timestalk</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/life" class="first_level_a">Life</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/health-fitness">Health &amp; Fitness</a></li>
+<li><a href="/sections/view/life-features">Features</a></li>
+<li><a href="/sections/view/fashion-beauty">Fashion &amp; Beauty</a></li>
+<li><a href="/sections/view/homes">Homes</a></li>
+<li><a href="/sections/view/motoring">Motoring</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/escape" class="first_level_a">Escape</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/arts-entertainment">Arts &amp; Entertainment</a></li>
+<li><a href="/sections/view/travel">Travel</a></li>
+<li><a href="/sections/view/food-drink">Food &amp; Drink</a></li>
+<li><a href="/sections/view/books">Books</a></li>
+</ul>
+</li>
+<li class="level_one current"><a href="/classifieds" class="first_level_a">Classifieds</a>
+<ul class="submenu_items no_js">
+<li class="current"><a href="/classifieds/property-for-sale">Property For Sale</a></li>
+<li><a href="/classifieds/property-wanted">Property Wanted</a></li>
+<li><a href="/classifieds/to-let">To Let</a></li>
+<li><a href="/classifieds/vehicles-for-sale">Vehicles For Sale</a></li>
+<li><a href="/classifieds/situations-vacant">Situations Vacant</a></li>
+<li><a href="/classifieds/for-sale">For Sale</a></li>
+<li><a href="/classifieds">More »</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/careers" class="first_level_a">Careers</a>
+<ul class="submenu_items no_js">
+<li><a href="/careers/section/finance">Finance and Legal</a></li>
+<li><a href="/careers/section/management">Management</a></li>
+<li><a href="/careers/section/technology">IT and Engineering</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/services" class="first_level_a">Services</a>
+<ul class="submenu_items no_js">
+<li><a href="/archive">Digital Archive</a></li>
+<li><a href="/epaper">e-Paper</a></li>
+<li><a href="http://www.alliednewspapers.com.mt/en/online-shop" target="_blank">Book Store</a></li>
+<li><a href="/services/bonds">Bonds</a></li>
+<li><a href="/services/shares">Shares</a></li>
+<li><a href="/services/sudoku">Sudoku</a></li>
+<li><a href="/weather/forecast">Weather</a></li>
+<li><a href="/services/webcam">Webcam</a></li>
+<li><a href="/letters">Letters to the editor</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+<div id="search_box">
+<form id="search_form" action="/search" method="post">
+<input type="hidden" name="data[Search][advanced]" value="0">
+<input type="submit" value="">
+<input type="search" id="search_bar" name="data[Search][keywords]" placeholder="Search">
+</form>
+<div id="search_results"></div>
+</div>
+</div>
+<div id="submenu_section" class="rounded_border_bottom"></div>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+</div>
+<div class="clear"></div>
+</div>
+<div id="content">
+<div id="section_section" class="grid_8 default_top_margin">
+<div class="classifieds_title">
+<h1 class="article_title">Classifieds</h1>
+<a href="/classifieds/book" class="small_buttons rounded_border classifieds_button">Book your classified</a> </div>
+<div class="section_divider"></div>
+<div id="advanced_search_form" class="classic_form rounded_border">
+<h2>Search for classified</h2>
+<form action="/classifieds/search" id="search_form" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="data[_Token][key]" value="d6d73f5ac5d56350d65f6b604038fca459531120" id="Token2097754865"/></div> <div class="form_row">
+<label for="ClassifiedKeywords">Search phrase:</label><input name="data[Classified][keywords]" type="text" placeholder="Search phrase" id="ClassifiedKeywords"/> <div class="clear"></div>
+</div>
+<div class="form_row">
+<label for="ClassifiedSection">Section</label><select name="data[Classified][section]" id="ClassifiedSection">
+<option value="">Any</option>
+<option value="for sale">For Sale</option>
+<option value="for sale or to let">For Sale Or To Let</option>
+<option value="health and beauty">Health And Beauty</option>
+<option value="marine">Marine</option>
+<option value="pest control">Pest Control</option>
+<option value="pets">Pets</option>
+<option value="property for sale">Property For Sale</option>
+<option value="property wanted">Property Wanted</option>
+<option value="situations vacant">Situations Vacant</option>
+<option value="situations wanted">Situations Wanted</option>
+<option value="to let">To Let</option>
+<option value="tuition">Tuition</option>
+<option value="vehicles for sale">Vehicles For Sale</option>
+<option value="wanted">Wanted</option>
+</select> <div class="clear"></div>
+</div>
+<div class="form_row">
+<input class="basic_button" type="submit" value="Search"/> </div>
+<div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="a7381a59c2ef702b9e0710fb83c641ba39e36f53%3A" id="TokenFields469495513"/></div></form></div>
+<div class="classifieds_title">
+<h2 class="article_title">Classifieds - Property For Sale</h2>
+<a href="/classifieds" class="small_buttons rounded_border classifieds_button">back</a> </div>
+<div class="section_divider"></div>
+<h2 class="classified_date default_top_margin">Friday, March 4, 2016</h2>
+<ul class="classified_list">
+<li name="1130380">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES FOR SALE on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0010, 7900 8287.</p>
+</li>
+<li name="1130381">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, MARSALFORN. Ready to move into, one bedroom, fully furnished flat with large terrace and outstanding country and sea views. Ideal holiday home. &euro;72,000. Phone 9942 3775.</p>
+</li>
+<li name="1130382">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, XAGĦRA. Two bedroom, cliff-edge apartment with views. Bargain not to be missed. &euro;135,000. Phone 9996 1008.</p>
+</li>
+<li name="1130383">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. 36sqm corner office / shop. &euro;79,500.www.officeinmalta.com Phone 7909 2224.</p>
+</li>
+<li name="1130384">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Four bedroom house, large garden and garage. &euro;295,000. Phone9942 0029.</p>
+</li>
+<li name="1130385">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Modern, three bedroom house, excellent condition, street level garages. &euro;330,000. Phone 9942 0029.</p>
+</li>
+<li name="1130386">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. Large, finished, three bedroom apartment. &euro;och135,000. Phone 2163 2919.</p>
+</li>
+<li name="1130387">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. New, luxury, three bedroom / three bathroom apartment. Magnificent sea views, terrace. &euro;650,000, garage optional. Phone 9986 8012.</p>
+</li>
+<li name="1130388">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Apartment one bedroom, valley views. &euro;165,000. Phone 7947 1071.</p>
+</li>
+<li name="1130389">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST VENERA. Finished maisonette behind Romeo Romano Gardens. &euro;och95,000. Phone 2163 2918.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Thursday, March 3, 2016</h2>
+<ul class="classified_list">
+<li name="1130345">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES FOR SALE on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0010, 7900 8287.</p>
+</li>
+<li name="1130346">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FGURA. Finished, large three bedroom apartment. Must view. &euro;och119,000. Phone owner 7947 0510.</p>
+</li>
+<li name="1130347">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, XAGĦRA. Cliffside, corner apartment with spectacular views of Ramla Bay and valley.&euro;259,000. Phone 9942 2146.</p>
+</li>
+<li name="1130348">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, XAGĦRA. House of character. Three bedrooms, pool, three-car garage. Shell form.&euro;180,000. Phone 9942 2146.</p>
+</li>
+<li name="1130349">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MADLIENA. New, luxury decorated, two bedroom, furnished spacious penthouse with lift. &euro;420,000, garage included. Phone 9991 9343.</p>
+</li>
+<li name="1130350">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MADLIENA. Outstanding groundfloor residence being sold highly furnished with extras. Ready to move into. &euro;549,000, lock-up garage included. Phone 7949 4923.</p>
+</li>
+<li name="1130351">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Finished, large three bedroom apartment with roof, close to beach. &euro;och110,000. Phone 2163 2919.</p>
+</li>
+<li name="1130352">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. New, three bedroom / two bathroom, spacious furnished flat. &euro;155,000. Phone 7944 0132.</p>
+</li>
+<li name="1130353">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA, Tign&eacute;, Fort Cambridge. Luxury furnished two bedroom apartment with garage, lift. &euro;625,000. Phone 7944 0132.</p>
+</li>
+<li name="1130354">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Three bedroom, fully furnished flat. Car space. &euro;700,000. Phone 9944 9779.</p>
+</li>
+<li name="1130355">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Apartment one bedroom, valley views. &euro;165,000. Phone 7947 1071.</p>
+</li>
+<li name="1130356">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Site 4+1, permit, valley and Balluta views. &euro;470,000. Phone 7947 1071.</p>
+</li>
+<li name="1130357">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST VENERA. Large garden including two-car garage. Quiet area, with trees and water. Phone 9944 9779.</p>
+</li>
+<li name="1130358">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. 141sqm, three bedroom, excellently finished apartment opposite green area. &euro;135,000. Phone 9942 4022.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Wednesday, March 2, 2016</h2>
+<ul class="classified_list">
+<li name="1130273">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES FOR SALE on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0010, 7900 8287.</p>
+</li>
+<li name="1130274">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. 1154sqm palazzo. 15 rooms. 110ft garden. Prestigious location. &euro;1,350,000. Phone 7944 6072.</p>
+</li>
+<li name="1130275">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BAĦAR IĊ-ĊAGĦAQ. Brand new, contemporary design corner terraced house. Semi-basement six-car garage, independent flatlet, three double bedrooms (two en-suite), all with open views, large roof terrace with pool permit. &euro;645,000. Phone 7949 5323.</p>
+</li>
+<li name="1130276">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BAĦAR IĊ-ĊAGĦAQ. Three bedroom groundfloor maisonette highly finished with parquet flooring. Squarish layout, 141sqm. Large 25sqm front patio. &euro;215,000. No agents please. Phone owner 7949 1003.</p>
+</li>
+<li name="1130277">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRGUMA. Luxury bungalow. Three / four bedrooms, pool, Jacuzzi, two-car garage. &euro;690,000. Phone 7939 2939.</p>
+</li>
+<li name="1130278">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FLORIANA. Top floor apartment with roof terrace. Phone 2388 0068/7926 7227.</p>
+</li>
+<li name="1130279">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, MARSALFORN. Finished three bedroom apartment. Lift, terrace, two bathrooms, balcony, box room. Bargain, &euro;85,000. Phone 7967 9111.</p>
+</li>
+<li name="1130280">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, TA&#039; SANNAT. Extremely large, two / three bedroom apartments, maisonettes, penthouse, garages and plots. Phone owner 7989 1819.</p>
+</li>
+<li name="1130281">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, VICTORIA. Shell, groundfloor, two bedroom apartment. Priced to sell, &euro;69,000. Phone today 9949 1115.</p>
+</li>
+<li name="1130282">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA (Msida Road, opposite stadium). Block of eight flats + airspace. No agents. Phone 7961 7761.</p>
+</li>
+<li name="1130283">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MADLIENA. New, luxury decorated, two bedroom, furnished spacious penthouse with lift. &euro;420,000, garage included. Phone 9991 9343.</p>
+</li>
+<li name="1130284">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Large three bedroom apartment &euro;108,000. Optional street level garage &euro;35,000. Phone 7998 5252.</p>
+</li>
+<li name="1130285">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA, behind Muscat Motors. Brand new, 85sqm two bedroom apartments overlooking a square, being sold finished, conveniently located five minutes&#039; walk from university and Strand seafront. Off plan prices at &euro;180,000. Phone 7949 5323.</p>
+</li>
+<li name="1130286">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA, University Heights. Three double bedroom, modern, furnished, semi-detached maisonette. large outdoor area, big garage. &euro;295,000. Phone 2138 5451 or 9947 3904.</p>
+</li>
+<li name="1130287">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. 700sqm townhouse. Pool, garden, four bedrooms. Luxury restoration. &euro;1,100,000. Phone 2388 0028/7944 6072.</p>
+</li>
+<li name="1130288">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. Large, finished, three bedroom apartment. &euro;och135,000. Phone 2163 2919.</p>
+</li>
+<li name="1130289">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PORTOMASO. Luxury two bedroom apartment, views. &euro;420,000. Phone 2388 0010/7900 8287.</p>
+</li>
+<li name="1130290">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+RABAT. House of character. Kitchen / dining, separate sitting, two bedrooms, bathroom, balconies, terrace. &euro;175,000. Phone 7988 3644.</p>
+</li>
+<li name="1130291">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+RABAT. Three bedroom duplex maisonette in quiet area, with own roof and airspace. &euro;140,000. Phone 7988 3644.</p>
+</li>
+<li name="1130292">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SIĠĠIEWI. A quaint, three bedroom house of character in the heart of the centre, within walking distance to parish church and shops. Must be seen to be appreciated. &euro;175,000. For appointment phone 7929 4201.</p>
+</li>
+<li name="1130293">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA, Depiro Street area. Finished and completely furnished two bedroom apartment two minutes from seafront, served with lift. Ideal rental investment. &euro;245,000. Phone 7949 5323.</p>
+</li>
+<li name="1130294">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA, Tign&eacute;, Fort Cambridge. Luxury furnished two bedroom apartment with garage, lift. &euro;625,000. Phone 7944 0132.</p>
+</li>
+<li name="1130295">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA, Victoria Junction. Brand new, three bedroom / two bathroom corner penthouse. 120sqm internally, plus 100sqm terrace. Off plan price &euro;490,000. Phone 7949 5323.</p>
+</li>
+<li name="1130296">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Corner, luxuriously furnished, three bedroom penthouse close to all amenities. Large terrace, car space. &euro;660,000. Phone 9986 8012.</p>
+</li>
+<li name="1130297">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Location, location. Immaculately kept two bedroom apartment near Spinola Bay. &euro;230,000. Phone 7992 2265.</p>
+</li>
+<li name="1130298">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. New, three bedroom apartment. Great location. &euro;385,000, car space optional. Phone 9925 2868.</p>
+</li>
+<li name="1130299">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Third floor, two bedroom / two bathroom apartment. &euro;196,000. Phone 7938 3970.</p>
+</li>
+<li name="1130300">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST VENERA. Finished maisonette behind Romeo Romano Gardens. &euro;och95,000. Phone 2163 2918.</p>
+</li>
+<li name="1130301">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. Maisonette. Front and rear yards, three double bedrooms (one en-suite). &euro;245,000. No agents please. To view phone owner 7979 1354.</p>
+</li>
+<li name="1130302">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TA&#039; XBIEX. Lovely, detached property finished to high standards. Three bedrooms, garden, pool. &euro;1,200,000. Phone 9925 2868.</p>
+</li>
+<li name="1130303">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+VALLETTA. Converted townhouse used as offices &euro;680,000. Phone 2388 0010/7900 8287.</p>
+</li>
+<li name="1130304">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+VALLETTA. Direct from owner. Top floor, two bedroom apartment. Unbeatable location in city centre. &euro;239,000. Phone owner 7921 1020.</p>
+</li>
+<li name="1130305">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+VALLETTA. Fully equipped restaurant catering for 30 covers. &euro;300,000. Phone 2388 0010/7900 8287.</p>
+</li>
+<li name="1130306">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Double fronted character home with pool. Large courtyard, two-car garage, separate living and entertainingareas. Needs personal touches. &euro;480,000. Phone Max Magri 9947 5444.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Tuesday, March 1, 2016</h2>
+<ul class="classified_list">
+<li name="1130248">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES FOR SALE on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0010, 7900 8287.</p>
+</li>
+<li name="1130249">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BINĠEMMA AREA. .66ha (six tumoli) of beautiful country / valley views. &euro;100,000. Phone 7949 2605.</p>
+</li>
+<li name="1130250">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FGURA. Finished, large three bedroom apartment. Must view. &euro;119,000. Phone owner 7947 0510.</p>
+</li>
+<li name="1130251">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, MARSALFORN. A two bedroom apartment with country views. New on the market.&euro;85,000.Phone 9942 2146.</p>
+</li>
+<li name="1130252">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, NADUR. Groundfloor, two bedroom apartment situated on two roads. &euro;235,000, optional garage available.Phone 9942 2146.</p>
+</li>
+<li name="1130253">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Finished, large three bedroom apartment with roof, close to beach. &euro;110,000. Phone 2163 2919.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Monday, February 29, 2016</h2>
+<ul class="classified_list">
+<li name="1130224">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES FOR SALE on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0010, 7900 8287.</p>
+</li>
+<li name="1130225">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BINĠEMMA AREA. .66ha (six tumoli) of beautiful country / valley views. &euro;100,000. Phone 7949 2605.</p>
+</li>
+<li name="1130226">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. New, three bedroom / two bathroom, spacious furnished flat. &euro;155,000. Phone 7944 0132.</p>
+</li>
+</div>
+<div id="section_extras_section" class="grid_4 default_top_margin">
+<div class="ad_rectangle ad">
+<span>Advert</span>
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-4" style="width:300px; height:250px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-4'); });
+-->
+</script> </div>
+<div id="widget_remax" class="section_box default_top_margin ">
+<div class="section_box_title rounded_border_top">
+<h2>
+<a href="http://www.remax-malta.com/" target="_blank" title="Real Estate in Malta">
+<span class="title">Real Estate in Malta by</span>
+<img src="/img/remax_logo.png" alt="Real Estate in Malta"/> </a>
+<br class="clear"/>
+</h2>
+</div>
+<div class="section_box_content remax_widget">
+<iframe src="https://blog.remax-malta.com/widgets/timesofmalta/" width="100%" height="190px" scrolling="no" frameborder="0"></iframe>
+</div>
+</div>
+<div id="widget_most_viewed" class="widget_most section_box default_top_margin ">
+<div class="section_box_title rounded_border_top">
+<h2>Popular Stories</h2>
+</div>
+<div class="section_box_content">
+<ol class="section_box_stories">
+<li class="count"><h3><a href="/articles/view/20160306/local/panama-hats-sell-briskly-on-castille-square.604845">Update 4 - Valletta protest: Busuttil...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160306/local/under-fenech-adami-konrad-mizzi-and-keith-schembri-would.604842">Updated - Cachia Caruana: Under Fenech...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160306/local/man-suffers-knife-injury-in-paceville-woman-policeman-slightly-injured.604704">Man suffers knife injury in Paceville,...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160305/local/monti-hawkers-offered-80000-to-bow-out.604605">Monti hawkers offered €80,000 to bow out</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160305/local/joyrider-15-crashes-into-car-traffic-lights-barriers-in-qormi.604685">Joyrider, 15, crashes into car, traffic...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160306/local/azeri-opens-companies-in-malta-with-nexia-bt-after-muscats-baku-trip.604695">Azeri opens companies in Malta with...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160305/local/mizzi-yet-to-pay-tax-fine-muscat-corrects-previous-days-statement.604655">Mizzi yet to pay tax fine, Muscat...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160305/local/air-malta-flight-diverted-after-medical-emergency.604680">Air Malta flight diverted after medical...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20160305/local/tal-masrija-residents-planning-to-sell-properties-after-mepa-revises.604609">Tal-Masrija residents planning to sell...</a></h3></li>
+</ol>
+</div>
+</div>
+<div class="ad_rectangle default_top_margin ad">
+<span>Advert</span>
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-3" style="width:300px; height:250px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-3'); });
+-->
+</script> </div>
+</div>
+</div>
+<div class="grid_12 default_top_margin">
+<div class="section_divider"></div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+<div class="grid_11">
+<a href="/cdn-cgi/l/email-protection#4b2632252e3c380b3f22262e38242d262a273f2a65282426">Send us your story</a> |
+<a href="/terms">Terms &amp; Conditions</a> |
+<a href="/privacypolicy">Privacy Policy</a> |
+<a href="/comments">Comments Policy</a> |
+<a href="/files/print-rate-card.pdf?2015-02-19">Print Ad Rate</a> |
+<a href="/files/online-rate-card.pdf">Online Ad Rate</a> |
+<a href="/contact">Contact us</a> |
+</div>
+<div class="grid_1">
+<div class="social-media socialmedia_wrapper_right">
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_facebook_follow"></a>
+<a class="addthis_button_twitter_follow"></a>
+<a class="addthis_button_rss_follow"></a>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="text_center">
+<p class="text_center">Copyright &copy; 2016 timesofmalta.com</p>
+</div>
+</div>
+<p class="print_disclaimer">Copyright &copy; Allied Newspapers Ltd., printed on - 07-03-2016 - Printed content is for personal use only, and should not be distributed</p>
+</div>
+<script type="text/javascript" src="/min/a.js?v=310"></script> <!--[if gt IE 6]>
+				<![endif]-->
+<link rel="stylesheet" type="text/css" href="/min/global.css?v=310"/><link rel="stylesheet" type="text/css" href="/css/../js/vendors/jquery.universal-smartbanner/jquery.ultimate-smartbanner.css"/>
+<script type="text/javascript" src="/js/behaviour/classifieds.js?v=310"></script>
+<script type="text/javascript" src="/js/vendors/jquery-cookiebar/jquery.cookiebar.js?v=310"></script>
+<script type="text/javascript" src="/js/behaviour/cookiebar.js?v=310"></script>
+<script type="text/javascript" src="/min/s.js?v=310"></script>
+<script type="text/javascript" src="/min/b.js?v=310"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"80cdbc66c5","applicationID":"2212732","transactionName":"b1ZSYUpQDBICBUVZV1YccVZMWA0PTAVdUUtLWlZcXVURThUPVEdLXVBEXFdf","queueTime":0,"applicationTime":132,"atts":"QxFRFwJKHxw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>

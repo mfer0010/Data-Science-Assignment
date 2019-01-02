@@ -1,0 +1,17 @@
+--2017-06-06 16:04:35--  http://www.timesofmalta.com/classifieds/property-for-sale
+Resolving www.timesofmalta.com (www.timesofmalta.com)... 104.20.132.36, 104.20.133.36
+Connecting to www.timesofmalta.com (www.timesofmalta.com)|104.20.132.36|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.timesofmalta.com/classifieds/property-for-sale [following]
+--2017-06-06 16:04:36--  https://www.timesofmalta.com/classifieds/property-for-sale
+Connecting to www.timesofmalta.com (www.timesofmalta.com)|104.20.132.36|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: '/mnt/hd2/home/jp/projects/tom_prop_4_sale/data/20170606_prop_for_sale_tom_classifieds.html'
+
+     0K .......... .......... .......... .......... ..........  507K
+    50K .......... .......... .......... .......... ..........  862K
+   100K .......... .......... .......... ....                  2.39M=0.2s
+
+2017-06-06 16:04:36 (788 KB/s) - '/mnt/hd2/home/jp/projects/tom_prop_4_sale/data/20170606_prop_for_sale_tom_classifieds.html' saved [137935]
+

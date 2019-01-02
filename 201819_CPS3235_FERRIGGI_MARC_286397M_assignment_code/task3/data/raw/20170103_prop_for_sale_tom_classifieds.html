@@ -1,0 +1,2234 @@
+ 
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]>
+<html lang="en-GB" class="ie6">
+<![endif]-->
+<!--[if IE 7 ]>
+<html lang="en-GB" class="ie7">
+<![endif]-->
+<!--[if IE 8 ]>
+<html lang="en-GB" class="ie8">
+<![endif]-->
+<!--[if IE 9 ]>
+<html lang="en-GB" class="ie9">
+<![endif]-->
+<!--[if IE 10 ]>
+<html lang="en-GB" class="ie10">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]>
+<!-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" xmlns:article="http://ogp.me/ns/article#">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta property="og:site_name" content="Times of Malta"/>
+<meta property="fb:app_id" content="356697991023219"/>
+<meta property="og:image" content="https://cdn-attachments.timesofmalta.com/default-article-image.png"/>
+<link rel="image_src" href="https://cdn-attachments.timesofmalta.com/default-article-image.png"/>
+<link href="/favicon.ico?1" type="image/x-icon" rel="icon"/><link href="/favicon.ico?1" type="image/x-icon" rel="shortcut icon"/> <link rel="stylesheet" type="text/css" href="/min/main.css?v=446"/>
+<!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="/min/ie.css?v=446" />    <![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="/min/ie6.css?v=446" />    <![endif]-->
+<link rel="stylesheet" type="text/css" href="/min/main.css?v=446"/><link rel="stylesheet" type="text/css" href="/min/global.css?v=446"/><link rel="stylesheet" type="text/css" href="/css/../js/vendors/jquery-news-ticker/styles/custom.css"/><link rel="stylesheet" type="text/css" href="/min/print.css?v=446" media="print"/>
+<link href="/rss" rel="alternate" type="application/rss+xml" title="Times of Malta Feed"/>
+ 
+<script type="text/javascript">
+    <!--
+    var TOM = {};
+    TOM.widgets = {};
+    TOM.baseUrl = "http://www.timesofmalta.com/";
+    TOM.domainUrl = "http://www.timesofmalta.com";
+    TOM.relativeUrl = "/";
+    TOM.imageUrl = TOM.relativeUrl + "img/";
+    TOM.jsUrl = TOM.relativeUrl + "js/";
+    TOM.cssUrl = TOM.relativeUrl + "css/";
+    TOM.minUrl = "/min/";
+    TOM.videos = {};
+    TOM.audio = {};
+    TOM.debug = false;
+    TOM.assetVersion = "446";
+    TOM.widgets = {};
+    TOM.contentIsPremium = 0;
+    TOM.jwPlayerUrl = "https://content.jwplatform.com/libraries/dsmEoHbp.js";
+    TOM.vastTagUrl = "http://pubads.g.doubleclick.net/gampad/ads?sz=620x348&iu=/15876412/VideoPreroll&ciu_szs&impl=s&gdfp_req=1&env=vp&output=xml_vast3&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
+    TOM.facebookAppId = "356697991023219";
+    TOM.googleLoginClientId = "1090966291850-85bba9o2erjo76tpcmuqmn110k8o3u0c.apps.googleusercontent.com";
+    TOM.takeOverAdvert = false;
+    TOM.popUpVideoAdvertName = false;
+    TOM.popUpVideoAdvertUrl = false;
+    TOM.popUpVideoTargetUrl = false;
+    TOM.isMobile = false;
+
+    
+        TOM.minifyMap = {"a":[1606,1740,1154,1034,1854,2811,1084,2130],"b":[2197,2009,1903,2567,6902,1029],"c":[3278,1537],"d":[3583,5821,3955,3987,4045],"e":[3158],"f":[9231,3651],"h":[3614],"i":[4077,3313],"j":[3123],"k":[3597,1269],"m":[1832],"o":[2626],"q":[1425],"s":[3151,4645]}    
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+
+                googletag.cmd.push(function () {
+                googletag.defineSlot("/15876412/Leaderboard", [728,90], "div-gpt-ad-1344004379057-0")
+                .addService(googletag.pubads())
+                .setTargeting('keyword', 'classified');
+        googletag.defineSlot("/15876412/Rectangular-Bottom", [300,250], "div-gpt-ad-1344004379057-3")
+                .addService(googletag.pubads())
+                .setTargeting('keyword', 'classified');
+        googletag.defineSlot("/15876412/Rectangular-TOP", [300,250], "div-gpt-ad-1344004379057-4")
+                .addService(googletag.pubads())
+                .setTargeting('keyword', 'classified');
+        googletag.defineSlot("/15876412/Skyscraper", [120,600], "div-gpt-ad-1344004379057-5")
+                .addService(googletag.pubads())
+                .setTargeting('keyword', 'classified');
+        googletag.defineSlot("/15876412/ClassicBanner", [620,75], "div-gpt-ad-1403279149655-0")
+                .addService(googletag.pubads())
+                .setTargeting('keyword', 'classified');
+                googletag.pubads().setTargeting('keyword', 'classified');
+        googletag.enableServices();
+    });
+    -->
+</script>
+ 
+<script type="text/javascript">
+        <!--
+        TOM.userId = 0;
+        TOM.hasPremium = 0;
+
+                -->
+    </script>
+<title>timesofmalta.com - General, sporting, and business news for Malta and the surrounding region</title>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=iw3Fj1aotV00UW" style="display:none" height="1" width="1" alt=""/></noscript>
+<meta name="author" content="Allied Newspapers Ltd">
+<meta name="apple-itunes-app" content="app-id=884947837">
+<meta name="apple-itunes-app-tab" content="app-id=884947837">
+<meta name="google-play-app" content="app-id=com.timesofmalta.timesofmalta">
+<meta name="google-play-app-tab" content="app-id=com.timesofmalta.timesofmalta">
+<meta name="msApplication-ID" content="App"/>
+<meta name="msApplication-TileImage" content="http://wscont1.apps.microsoft.com/winstore/1x/5ee7e1ed-c232-49b6-b3c2-f0ea4c80207a/Icon.411515.png"/>
+<meta name="msApplication-PackageFamilyName" content="AlliedNewspapersLtd.TimesofMalta_xc12w5ay2ynxc"/>
+<meta name="msApplication-WinPhonePackageUrl" content="db003e19-c644-4293-9e36-690a8082570c"/>
+</head>
+<body>
+<div id='theme_background'></div>
+<div id="main_body" class="container_12">
+<div class="ad_skyscraper ad">
+<span>Advert</span>
+ 
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-5" style="width:120px; height:600px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-5'); });
+-->
+</script>
+</div>
+<div id="header">
+<div id="top_most_menu_section">
+<div class="grid_3 text_left">
+ 
+<div class="social-media app_badges">
+<div class="addthis_toolbox addthis_default_style">
+<a class="top_app_badge_link" href="/mobileapps">
+<img src="https://cdn-images.timesofmalta.com/store_icons.png" alt="Mobile Apps" title="Mobile Apps" class="top_app_badge"/> </a>
+</div>
+</div>
+<div class="clear"></div> </div>
+<div class="grid_5 text_center content">
+<div id="widget_weather" class=" ">
+<span class="widget_weather_date">Tuesday, January 3, 2017</span>
+<img src="/img/weather/clear.png" alt="clear" class="widget_weather_image"/> <span class="widget_weather_temp">15&deg;C</span>
+<a href="/weather/forecast">[Forecast]</a></div>
+&nbsp;
+</div>
+<div class="grid_4 text_right content">
+<a href="/users/login" class="sign_in_link">Sign in</a> or
+<a href="/users/register?location=http%3A%2F%2Fwww.timesofmalta.com%2Fclassifieds%2Fproperty-for-sale&amp;title=Times+Of+Malta" id="register_link">Create your Account</a> <div id="modal_dialog" class="modal_dialog login_form rounded_border">
+<h2>Sign in</h2>
+<div id="modal_flash_message" class="flash_message modal_flash_message"></div>
+<div class="dialog_left_column rounded_border">
+<h3 class="mobile_selector">Use your timesofmalta.com account to login:</h3>
+<form action="/users/login" id="UserLoginFormInlined" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="data[_Token][key]" value="7c05b0cd29b6ab3010e59aed3a0565d4b6a618a0" id="Token2124663851"/></div> <div class="form_row">
+<label for="AccountUsername">Email:</label> <input name="data[Account][username]" type="email" placeholder="Your email" id="user_email" class="validate[required]" maxlength="255"/> <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="form_row">
+<div class="input password"><label for="user_password">Password:</label><input type="password" name="data[Account][password]" id="user_password" class="validate[required]" maxlength="255" placeholder="Your password"/></div> <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="form_row">
+<div id="sign_in_controls">
+</div>
+<span id="sign_in_links" class="mobile_selector">
+<a href="/users/register?location=http%3A%2F%2Fwww.timesofmalta.com%2Fclassifieds%2Fproperty-for-sale&amp;title=Times+Of+Malta">Create your Account</a><br/>
+<b><a href="/users/help">Need help signing in?</a></b>
+</span>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="submit"><input name="login" class="basic_button" id="login" type="submit" value="Sign In"/></div><div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="270ce6d807449af691bbc8c0b63885035c5b4f66%3A" id="TokenFields289820092"/></div></form> </div>
+<div class="dialog_right_column oauth_ui mobile_selector">
+<h3>Or Sign in with Facebook or Google</h3>
+<div id="oauth_login_error" style="display:none">
+<p></p>
+<input type="button" class="basic_button cta" value="Ok"><div class="clear"></div>
+</div>
+<div id="oauth_login_buttons">
+<img src="/img/login/facebook.png" class="oauth_login" alt="facebook login button" data-service="facebook"/> <img src="/img/login/google.png" class="oauth_login" alt="google logo" data-service="google"/> </div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+<div class="section_divider"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div id="logo_and_banner_section" class="grid_12">
+<a href="/" id="logo_link">Times of Malta Homepage</a>
+<div class="ad_leaderboard ad">
+<span>Advert</span>
+ 
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-0" style="width:728px; height:90px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-0'); });
+-->
+</script>
+</div>
+<div class="clear"></div>
+</div>
+<div id="menu_container" class="grid_12">
+<div id="menu_section" class="rounded_border">
+<ul id="menu_items" class="no_js">
+<li class="level_one"><a href="/" class="home_link"></a>
+<ul class="submenu_items no_js">
+<li><a href="/articles/premium">Premium articles</a></li>
+<li><a href="/home/most/popular">Popular stories</a></li>
+<li><a href="/archive">Digital Archive</a></li>
+<li><a href="/epaper">e-Paper</a></li>
+<li><a href="/premium">Subscribe to Premium</a></li>
+<li><a href="/video-on-demand" class="menu_vod">Video on Demand</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/news" class="first_level_a">News</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/local">National</a></li>
+<li><a href="/sections/view/world">World</a></li>
+<li><a href="/sections/view/social">Social &amp; Personal</a></li>
+<li><a href="/sections/view/education">Education</a></li>
+<li><a href="/sections/view/interview">Interview</a></li>
+<li><a href="/sections/view/environment">Environment</a></li>
+<li><a href="/sections/view/gozo">Gozo</a></li>
+<li><a href="/sections/view/pictures">Pictures</a></li>
+<li><a href="/sections/view/religion">Religion</a></li>
+<li><a href="/videos">Videos</a></li>
+<li><a href="/sections/view/odd-news">Odd News</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/sport" class="first_level_a">Sport</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/football">Football</a></li>
+<li><a href="/sections/view/f1">Formula 1</a></li>
+<li><a href="/sections/view/basketball">Basketball</a></li>
+<li><a href="/sections/view/waterpolo">Waterpolo</a></li>
+<li><a href="/sections/view/horse-racing">Horse Racing</a></li>
+<li><a href="/sections/view/shooting">Shooting</a></li>
+<li><a href="/sections/view/rugby">Rugby</a></li>
+<li><a href="/sections/view/tennis">Tennis</a></li>
+<li><a href="/sections/view/athletics">Athletics</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/business" class="first_level_a">Business</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/business-news">News</a></li>
+<li><a href="/sections/view/business-international">International</a></li>
+<li><a href="/sections/view/business-market-analysis">Market Analysis</a></li>
+<li><a href="/sections/view/business-comment">Comment</a></li>
+<li><a href="/sections/view/technology">Technology</a></li>
+<li><a href="/sections/view/business-features">Features</a></li>
+<li><a href="/sections/view/consumer-affairs">Consumer Affairs</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/comment" class="first_level_a">Comment</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/editorial">Editorial</a></li>
+<li><a href="/sections/view/opinion">Opinion</a></li>
+<li><a href="/sections/view/letters">Letters</a></li>
+<li><a href="/sections/view/blogs">Blogs</a></li>
+<li><a href="/sections/view/cartoons">Cartoons</a></li>
+<li><a href="/sections/view/timestalk" class="menu_timestalk">Timestalk</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/life" class="first_level_a">Life</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/health-fitness">Health &amp; Fitness</a></li>
+<li><a href="/sections/view/life-features">Features</a></li>
+<li><a href="/sections/view/fashion-beauty">Fashion &amp; Beauty</a></li>
+<li><a href="/sections/view/homes">Homes</a></li>
+<li><a href="/sections/view/motoring">Motoring</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/sections/view/escape" class="first_level_a">Escape</a>
+<ul class="submenu_items no_js">
+<li><a href="/sections/view/arts-entertainment">Arts &amp; Entertainment</a></li>
+<li><a href="/sections/view/travel">Travel</a></li>
+<li><a href="/sections/view/food-drink">Food &amp; Drink</a></li>
+<li><a href="/sections/view/books">Books</a></li>
+</ul>
+</li>
+<li class="level_one current"><a href="/classifieds/index/classifieds" class="first_level_a">Classifieds</a>
+<ul class="submenu_items no_js">
+<li class="current"><a href="/classifieds/property-for-sale">Property For Sale</a></li>
+<li><a href="/classifieds/property-wanted">Property Wanted</a></li>
+<li><a href="/classifieds/to-let">To Let</a></li>
+<li><a href="/classifieds/vehicles-for-sale">Vehicles For Sale</a></li>
+<li><a href="/classifieds/situations-vacant">Situations Vacant</a></li>
+<li><a href="/classifieds/for-sale">For Sale</a></li>
+<li><a href="/classifieds">More »</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/careers" class="first_level_a">Careers</a>
+<ul class="submenu_items no_js">
+<li><a href="/careers/section/finance">Finance and Legal</a></li>
+<li><a href="/careers/section/management">Management</a></li>
+<li><a href="/careers/section/technology">IT and Engineering</a></li>
+<li><a href="/careers/section/marketing">Sales and Marketing</a></li>
+</ul>
+</li>
+<li class="level_one"><a href="/services" class="first_level_a">Services</a>
+<ul class="submenu_items no_js">
+<li><a href="/archive">Digital Archive</a></li>
+<li><a href="/epaper">e-Paper</a></li>
+<li><a href="http://www.alliednewspapers.com.mt/en/online-shop" target="_blank">Book Store</a></li>
+<li><a href="/services/bonds">Bonds</a></li>
+<li><a href="/services/shares">Shares</a></li>
+<li><a href="/services/sudoku">Sudoku</a></li>
+<li><a href="/weather/forecast">Weather</a></li>
+<li><a href="/services/webcam">Webcam</a></li>
+<li><a href="/letters">Letters to the editor</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+<div id="search_box">
+<form id="search_form" action="/search" method="post">
+<input type="hidden" name="data[Search][advanced]" value="0">
+<input type="submit" value="">
+<input type="search" id="search_bar" name="data[Search][keywords]" placeholder="Search">
+</form>
+<div id="search_results"></div>
+</div>
+</div>
+<div id="submenu_section" class="rounded_border_bottom"></div>
+</div>
+<div class="clear"></div>
+<div class="grid_12">
+</div>
+<div class="clear"></div>
+</div>
+<div id="content">
+<div id="section_section" class="grid_8 default_top_margin">
+<div class="classifieds_title">
+<h1 class="article_title">Classifieds</h1>
+<a href="/classifieds/book" class="small_buttons rounded_border classifieds_button">Book your classified</a> </div>
+<div class="section_divider"></div>
+<div id="advanced_search_form" class="classic_form rounded_border">
+<h2>Search for classified</h2>
+<form action="/classifieds/search" id="search_form" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="data[_Token][key]" value="7c05b0cd29b6ab3010e59aed3a0565d4b6a618a0" id="Token234774838"/></div> <div class="form_row">
+<label for="ClassifiedKeywords">Search phrase:</label><input name="data[Classified][keywords]" type="text" placeholder="Search phrase" id="ClassifiedKeywords"/> <div class="clear"></div>
+</div>
+<div class="form_row">
+<label for="ClassifiedSection">Section</label><select name="data[Classified][section]" id="ClassifiedSection">
+<option value="">Any</option>
+<option value="business opportunity">Business Opportunity</option>
+<option value="for sale">For Sale</option>
+<option value="for sale or to let">For Sale Or To Let</option>
+<option value="health and beauty">Health And Beauty</option>
+<option value="home improvements">Home Improvements</option>
+<option value="marine">Marine</option>
+<option value="pest control">Pest Control</option>
+<option value="property for sale">Property For Sale</option>
+<option value="property wanted">Property Wanted</option>
+<option value="services">Services</option>
+<option value="situations vacant">Situations Vacant</option>
+<option value="situations wanted">Situations Wanted</option>
+<option value="to let">To Let</option>
+<option value="tuition">Tuition</option>
+<option value="vehicles for sale">Vehicles For Sale</option>
+<option value="wanted">Wanted</option>
+</select> <div class="clear"></div>
+</div>
+<div class="form_row">
+<input class="basic_button" type="submit" value="Search"/> </div>
+<div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="a7381a59c2ef702b9e0710fb83c641ba39e36f53%3A" id="TokenFields739076997"/></div></form></div>
+<div class="classifieds_title">
+<h2 class="article_title">Classifieds - Property For Sale</h2>
+<a href="/classifieds" class="small_buttons rounded_border classifieds_button">back</a> </div>
+<div class="section_divider"></div>
+<h2 class="classified_date default_top_margin">Tuesday, January 3, 2017</h2>
+<ul class="classified_list">
+<li name="1179701">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179702">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Large, three bedroom partly furnished apartment. &euro;199,000. Phone 7940 5038.</p>
+</li>
+<li name="1179703">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SALE OF commercial property for immediate investment, leased to third parties at a good rent. 130sqm area with a Class 4 permit. &euro;250,000. Interested parties please phone 7924 5014. </p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Monday, January 2, 2017</h2>
+<ul class="classified_list">
+<li name="1179686">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179687">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BAĦAR IĊ-ĊAGĦAQ. Brand new three bedroom apartment. Spacious front terrace, unobstructed country / sea views. &euro;265,000. Phone 9980 1017. </p>
+</li>
+<li name="1179688">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Two double bedroom apartment close to seafront. Main with en-suite, study. &euro;190,000. Phone 9945 0582.</p>
+</li>
+<li name="1179689">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SENGLEA (L-Isla). Seafront duplex penthouse. Two bedrooms, infinity swimming pool. Definitely a one-off property. &euro;595,000. Phone 9945 0582.</p>
+</li>
+<li name="1179690">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Three bedroom, finished and furnished flat with interconnecting garage. &euro;345,000. Phone 7970 2829.</p>
+</li>
+<li name="1179691">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST VENERA. Modern, fully furnished two bedroom penthouse, large terrace. &euro;165,000. Phone 7940 5038.</p>
+</li>
+<li name="1179692">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. Duplex, finished maisonette, views. Large terraces, three bedrooms, study, TV room, living room, dining room, separate kitchen. &euro;585,000. Phone 7934 6849.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Sunday, January 1, 2017</h2>
+<ul class="classified_list">
+<li name="1179328">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+10 PRICE REDUCTIONS this week on properties for sale at Ben Estates Ltd. Visit our website www.benestates.com or phone 9999 9983.</p>
+</li>
+<li name="1179329">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179330">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD, Misraħ Kola. 290sqm plot for semi-detached villa with permits. Phone 9926 4468.</p>
+</li>
+<li name="1179331">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. 125sqm, two bedroom penthouse. Countryside views, many extras. ̈́4&Ucirc;320,000. Phone 7906 0714.</p>
+</li>
+<li name="1179332">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Bargain priced one bedroom penthouse, sold finished. ̈́4&Ucirc;132,000. Phone 7906 0714.</p>
+</li>
+<li name="1179333">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Detached, 700sqm bungalow facing countryside, quiet area. Garden, pool, flatlet. ̈́4&Ucirc;890,000. Phone 9947 6945.</p>
+</li>
+<li name="1179334">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Duplex, elevated groundfloor maisonette including a garage. No agents. Phone 9984 8380. </p>
+</li>
+<li name="1179335">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Luxuriously finished, three bedroom penthouse. Massive terrace, views. ̈́4&Ucirc;375,000. Phone 7906 0714.</p>
+</li>
+<li name="1179336">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Outstanding house of character with garden, large pool, garage and carport. No agents. Phone 9984 8380.</p>
+</li>
+<li name="1179337">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Semi-detached duplex maisonette in mint condition, comes with large yard, three-car garage. ̈́4&Ucirc;380,000. Phone 7942 9239.</p>
+</li>
+<li name="1179338">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Terraced house, 23 x110. Spacious back garden. kitchen/ sitting / dining, four bedrooms, terrace, garage. ̈́4&Ucirc;455,000. Phone sensar 7748 5858. </p>
+</li>
+<li name="1179339">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD. Three bedroom, groundfloor maisonette. ̈́4&Ucirc;259,000. Phone 7952 4407.</p>
+</li>
+<li name="1179340">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ATTARD / Naxxar / Mosta: houses of character, terraced houses, maisonettes, flats, bungalows, plots. Phone 7921 1403.</p>
+</li>
+<li name="1179341">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BAĦAR IĊ-ĊAGĦAQ. 190sqm, second floor duplex apartment in block of two with roof terrace. No agents. Phone 9984 9380. </p>
+</li>
+<li name="1179342">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BAĦAR IĊ-ĊAGĦAQ. Rare to come across three bedroom terrace house. Hallway, good sized sitting / dining, box room, spacious kitchen / breakfast overlooking the back yard, interconnecting two-car garage. ̈́4&Ucirc;410,000. Phone 9988 4893.</p>
+</li>
+<li name="1179343">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BAĦRIJA. Highly finished penthouse, sea / country views. Open plan, three bedrooms. ̈́4&Ucirc;240,000, including a garage. Phone 9993 9956.</p>
+</li>
+<li name="1179344">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BALZAN. Attractively priced, superbly converted townhouse. Lovely entrance, open plan living / dining with study, two / three bedrooms, spacious back yard and sizable terrace. ̈́4&Ucirc;259,000. Phone 9947 6949.</p>
+</li>
+<li name="1179345">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIDNIJA. Bargain. Quick sale. Fully converted house of character. Separate kitchen / living / dining, three bedrooms, fireplace, large BBQ deck and pool area. No agents. Phone 9942 7491.</p>
+</li>
+<li name="1179346">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA, outskirts. Semi-detached villa with large outdoors. ̈́4&Ucirc;465,000. Phone 9987 3162.</p>
+</li>
+<li name="1179347">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA. An already established ready to start business opportunity. ̈́4&Ucirc;357,000. Phone 7953 7803.</p>
+</li>
+<li name="1179348">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA. Converted and ready to move into, two bedroom house of character with lovely finishes/ outdoor space. ̈́4&Ucirc;195,000. Phone 7978 8888.</p>
+</li>
+<li name="1179349">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA. Plot measuring approximately 290sqm, suitable 3+1 area, having two apartments per floor. ̈́4&Ucirc;680,000. Phone 9947 6949.</p>
+</li>
+<li name="1179350">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA. Townhouse. Three double bedrooms, yard, roof, washroom and airspace. ̈́4&Ucirc;140,000. Phone 9952 3676.</p>
+</li>
+<li name="1179351">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA. Two bedroom converted house of character with a study, situated in a quiet alley. Phone 9921 2005.</p>
+</li>
+<li name="1179352">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA.Three bedroom, highly finished apartment. Great location opposite villa area. ̈́4&Ucirc;240,000. Phone 9945 0385.</p>
+</li>
+<li name="1179353">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRŻEBBUĠA, Tal-Papa area. Terraced house with garage, airspace. Freehold. Phone 9964 4224.</p>
+</li>
+<li name="1179354">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRŻEBBUĠA. 170sqm, solitary, three / four bedroom maisonette. ̈́4&Ucirc;269,000. Phone 9972 7242.</p>
+</li>
+<li name="1179355">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRŻEBBUĠA. Corner solitary maisonette, 168sqm living space, roof. ̈́4&Ucirc;268,000. Phone 9964 4224.</p>
+</li>
+<li name="1179356">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRŻEBBUĠA. Spacious apartment just a few meters from Pretty Bay, overlooking public gardens, enjoying own part of roof. ̈́4&Ucirc;125,000. Phone 7942 1340.</p>
+</li>
+<li name="1179357">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BUĠIBBA. Fully furnished two bedroom apartment with unobstructed views, close to Buġibba Square. Spacious sitting, kitchen / dining, washroom, balcony, lift. ̈́4&Ucirc;137,000 FH. Phone 9995 7770.</p>
+</li>
+<li name="1179358">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BUĠIBBA. Highly finished, fully furnished three bedroom penthouse. Bathroom / en-suite, front / back terraces, airspace, lift. ̈́4&Ucirc;265,000. Phone 9995 7770.</p>
+</li>
+<li name="1179359">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BUĠBBA. Two bedroom, furnished apartment. ̈́4&Ucirc;och148,000. Phone 9939 5686.</p>
+</li>
+<li name="1179360">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+COSPICUA (Bormla). Townhouses starting from ̈́4&Ucirc;115,000. Take advantage of the new scheme and get as much as 70% on renovation expenses when you buy a townhouse in village core. Very good deals available in Cospicua and Senglea (L-Isla). Phone 9937 3635.</p>
+</li>
+<li name="1179361">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+COSPICUA(Bormla), close to university.One bedroom, fully finished and furnished duplex maisonette. Only ̈́4&Ucirc;95,000.Phone owner 7944 5991.</p>
+</li>
+<li name="1179362">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FGURA. Large, highly finished, two bedroom maisonette, large back yard. ̈́4&Ucirc;106,500. Phone 9917 0000.</p>
+</li>
+<li name="1179363">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FGURA. Newly finished three bedroom penthouse. ̈́4&Ucirc;160,000. Phone 9972 7242.</p>
+</li>
+<li name="1179364">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FGURA. Penthouse. Two double bedrooms, two bathrooms, large terrace. ̈́4&Ucirc;153,000. Phone 9972 7242.</p>
+</li>
+<li name="1179365">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FGURA. Three / four bedroom / two bathroom apartment, three balconies. ̈́4&Ucirc;150,000. Phone 9972 7242.</p>
+</li>
+<li name="1179366">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦARGĦUR. Highly finished apartment, small block. Three double bedrooms, large front / back balconies. ̈́4&Ucirc;265,000, garage included. Phone 7934 3333.</p>
+</li>
+<li name="1179367">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦARGĦUR. Newly built, finished three bedroom apartment in a block of only seven apartments. ̈́4&Ucirc;197,000, optional garage ̈́4&Ucirc;21,500. Phone 7900 5959.</p>
+</li>
+<li name="1179368">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦAXAQ. Central, exceptionally large house of character. Mature garden, terraces, internal courtyard, huge well. Property approximately 450sqm. Must sell. Phone 2163 2203. </p>
+</li>
+<li name="1179369">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦAXAQ. Located five minutes&#039; drive to the airport, one bedroom apartment in a new block served with lift, having use of roof, ideal as a rental investment. Finished to high standards, including bathroom and internal doors. ̈́4&Ucirc;82,000. Phone 9937 3635.</p>
+</li>
+<li name="1179370">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦAXAQ. Maisonette. Three bedrooms, one-car garage. Country views. ̈́4&Ucirc;275,000. Phone7765 4128.</p>
+</li>
+<li name="1179371">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, BIRBUBA Għarb. A complex consisting of two farmhouses each with own pool, a block of four one bedroom apartments with communal pool, and a plot of land. Phone 9986 0135.</p>
+</li>
+<li name="1179372">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, GĦAJNSIELEM. Fully furnished 75sqm apartment. Open plan with views, two bedrooms, communal pool, garage, balcony. ̈́4&Ucirc;160,000. Phone 7949 0827.</p>
+</li>
+<li name="1179373">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, MARSALFORN. Seafront, shell two bedroom penthouse. Terrace, balcony, lift. Common parts ready. ̈́4&Ucirc;198,000. Phone 7749 1115.</p>
+</li>
+<li name="1179374">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, MUNXAR. 300-year-old farmhouse. Three bedrooms, open plan, internal yard, pool, back yard, large rural field. ̈́4&Ucirc;380,000. Phone 7949 0827.</p>
+</li>
+<li name="1179375">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, NADUR. Semi-finished 140sqm penthouse, unobstructed country / sea views.Open plan, front terrace, two bedrooms, two bathrooms, back balcony. ̈́4&Ucirc;179,000. Phone 7949 0827.</p>
+</li>
+<li name="1179376">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, VICTORIA. Penthouse. Two bedrooms, large terrace overlooking beautiful country views. ̈́4&Ucirc;105,000, garage optional. Phone 7901 6961.</p>
+</li>
+<li name="1179377">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, XAGĦRA. Shell four bedroom house. Large pool / deck, garage. Priced to sell. ̈́4&Ucirc;375,000. Phone 7967 9111.</p>
+</li>
+<li name="1179378">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, XLENDI. Large house situated on the cliff&#039; s edge. Terrace, garden, amazing views. ̈́4&Ucirc;330,000. Phone 7901 6961.</p>
+</li>
+<li name="1179379">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GUARDAMANGIA. Two bedroom highly finished apartments starting from ̈́4&Ucirc;125,000. Phone 7777 2982.</p>
+</li>
+<li name="1179380">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GUDJA, outskirts. Terraced house, unusual layout. Three bedrooms, two bathrooms, study, sitting, kitchen / living, back yard, washroom, huge basement garage. ̈́4&Ucirc;360,000. Phone sensar 7748 5858.</p>
+</li>
+<li name="1179381">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Bargain. Spacious, three bedroom corner apartment easily split into two apartments. Ideal rental investment. ̈́4&Ucirc;169,000. Phone 9947 6949.</p>
+</li>
+<li name="1179382">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Furnished, two bedroom apartment seconds from seafront. ̈́4&Ucirc;200,000. Phone 9942 2782.</p>
+</li>
+<li name="1179383">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Great rental investment. Three bedroom apartment. ̈́4&Ucirc;220,000. Phone 7927 0458.</p>
+</li>
+<li name="1179384">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Highly finished two bedroom apartment close to seafront. ̈́4&Ucirc;225,000. Phone 9949 8660.</p>
+</li>
+<li name="1179385">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Selection of one / two / three bedroom apartments being sold highly finished, including bathrooms and doors. Very prominent area of Gżira just 50m from promenade, enjoying side sea views from all apartments. Rental investment of 6 to 7%. Starting from ̈́4&Ucirc;155,000. Phone 9993 1483.</p>
+</li>
+<li name="1179386">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Three bedroom apartment close to university, ideal as a rental investment. ̈́4&Ucirc;173,000. Phone 7900 5959.</p>
+</li>
+<li name="1179387">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ĦAMRUN. Shop in central area. ̈́4&Ucirc;40,000, negotiable. Phone 7947 1947. </p>
+</li>
+<li name="1179388">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ĦAMRUN. Well kept two bedroom townhouse, full roof. ̈́4&Ucirc;112,000. Phone9904 9596.</p>
+</li>
+<li name="1179389">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+IKLIN. Solitary, duplex maisonette with airspace. ̈́4&Ucirc;355,000. Phone 7952 4407.</p>
+</li>
+<li name="1179390">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+KALKARA. Highly finished, fully furnished two bedroom apartment, sea views. ̈́4&Ucirc;160,000. Phone 9972 7242.</p>
+</li>
+<li name="1179391">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+KALKARA. Two bedroom terraced house, two-car interconnected garage. ̈́4&Ucirc;319,000. Phone 7953 7803.</p>
+</li>
+<li name="1179392">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+KAPPARA, close to Balluta. Two bedroom apartment. ̈́4&Ucirc;och125,000. Phone 9928 7339.</p>
+</li>
+<li name="1179393">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+KAPPARA. Semi-detached villa over 330sqm, six-car garage. ̈́4&Ucirc;650,000. Phone 7989 0362.</p>
+</li>
+<li name="1179394">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+KAPPARA. Villa with a bright squarish layout, in a tranquil area. ̈́4&Ucirc;680,000. Phone 9987 3162.</p>
+</li>
+<li name="1179395">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+LIJA, Tal-Mirakli. Three bedroom, fourth floor, very bright apartment direct from owner. Starting from ̈́4&Ucirc;och160,000. Phone 7937 3415.</p>
+</li>
+<li name="1179396">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+LUQA. Furnished, highly converted house with Jacuzzi, skylight, well. ̈́4&Ucirc;356.000. Phone 9964 4224.</p>
+</li>
+<li name="1179397">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+LUQA. Well kept second floor maisonette. Sitting, kitchen, living / dining, three bedrooms, two bathrooms, balconies, washroom and half ownershipof roof. ̈́4&Ucirc;215,000. Phone 7774 4448.</p>
+</li>
+<li name="1179398">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MADLIENA. Three bedroom corner villa with pool in need of refurbishment. ̈́4&Ucirc;1,500,000. Phone 9970 0300.</p>
+</li>
+<li name="1179399">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MANIKATA. Magnificent views, huge terraces and highly finished. 163sqm three bedroom ground maisonette ̈́4&Ucirc;235,000; 147sqm three bedroom apartment ̈́4&Ucirc;225,000; 148sqm, second floor three bedroom apartment ̈́4&Ucirc;270,000. Phone owners 7934 6222/7922 2275.</p>
+</li>
+<li name="1179400">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MANIKATA. Penthouse with views all round. Phone 9977 0419.</p>
+</li>
+<li name="1179401">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. 120sqm, brand new, three bedroom, fully furnished apartment. ̈́4&Ucirc;160,000. Phone 9972 7242.</p>
+</li>
+<li name="1179402">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Corner penthouse, unobstructed country views. 140sqm terrace. ̈́4&Ucirc;350,000. Phone 7771 5551.</p>
+</li>
+<li name="1179403">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Double fronted, designer finished maisonette, underlying semi-basement garage. ̈́4&Ucirc;275,000. Phone 7771 5551.</p>
+</li>
+<li name="1179404">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Fully furnished, three bedrooms apartment with roof. ̈́4&Ucirc;155,000, garage optional. Phone 9946 7721.</p>
+</li>
+<li name="1179405">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Furnished apartment close to amenities. Three bedrooms, part of roof. ̈́4&Ucirc;155,000. Phone 7703 6425.</p>
+</li>
+<li name="1179406">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Furnished, three bedroom apartment, two big yards. ̈́4&Ucirc;125,000. Phone 7703 6425.</p>
+</li>
+<li name="1179407">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Highly finished maisonette on two plots. ̈́4&Ucirc;260,000. Phone 9972 7242.</p>
+</li>
+<li name="1179408">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Large corner apartments, unobstructed country views. Starting ̈́4&Ucirc;195,000. Phone 7771 5551.</p>
+</li>
+<li name="1179409">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Large, highly finished, four bedroom apartment, washroom, roof. ̈́4&Ucirc;148,000. Phone 9917 0000.</p>
+</li>
+<li name="1179410">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Luxury, fully furnished three bedroom apartment. Worth viewing. ̈́4&Ucirc;135,000. Phone 7754 2837.</p>
+</li>
+<li name="1179411">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Maisonette with entire roof, airspace, one-car garage, sea views. ̈́4&Ucirc;267,000. Phone 9972 7242.</p>
+</li>
+<li name="1179412">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Maisonette with roof and airspace, views. ̈́4&Ucirc;230,000. Phone 9972 7242.</p>
+</li>
+<li name="1179413">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. One / two / three bedroom maisonettes / apartments starting from ̈́4&Ucirc;105,000. Phone 9972 7242.</p>
+</li>
+<li name="1179414">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Ready to move into, first floor, three bedroom maisonette, own airspace. ̈́4&Ucirc;250,000. Phone 7953 7803.</p>
+</li>
+<li name="1179415">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Two bedroom, furnished penthouse, views. ̈́4&Ucirc;191,000. Phone 9972 7242.</p>
+</li>
+<li name="1179416">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Two bedroom, highly finished and furnished apartment, terrace. ̈́4&Ucirc;140,000. Phone 9972 7242.</p>
+</li>
+<li name="1179417">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. Very spacious and modern three bedroom apartment in a new block served with lift, facing a green area. Very modern furniture. Must be seen. ̈́4&Ucirc;160,000. Phone 9937 3635.</p>
+</li>
+<li name="1179418">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSAXLOKK, football ground area. Terraced house with basement garage, sea views. Phone 9964 4224.</p>
+</li>
+<li name="1179419">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA, Santa Maria Estate. Detached villa on 1,124sqm, on solid rock, sea views. Three bedrooms, pool, four-car garage. ̈́4&Ucirc;1,200,000. Phone 9945 0827.</p>
+</li>
+<li name="1179420">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA, Santa Maria Estate. Solid rock. Finished fully detached bungalow with pool enjoying unobstructed sea and country views. ̈́4&Ucirc;1,175,000. No agents. Phone 7949 0063.</p>
+</li>
+<li name="1179421">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. A fully detached villa with a spectacular view, three bedrooms, three bathrooms, lounge, spacious living room, dining room, kitchen, library, garden, and own pool, underlying flatlet with a two-car garage. Price on request. Phone 9986 0135.</p>
+</li>
+<li name="1179422">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Finished apartment ideal as rental investment. ̈́4&Ucirc;145,000, garage optional. For immediate viewing phone 9993 9956.</p>
+</li>
+<li name="1179423">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Finished three bedroom apartment with views. ̈́4&Ucirc;170,000 FH. Phone 9916 8156.</p>
+</li>
+<li name="1179424">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Highly finished apartment. Three bedrooms (main with en-suite), spacious open plan, bathroom, yard. ̈́4&Ucirc;160,000. Phone 9995 7770.</p>
+</li>
+<li name="1179425">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Open plan penthouse with views, to be sold finished. Three bedrooms, bathroom / en-suite, front / back terraces. ̈́4&Ucirc;275,000. Optional garages also available. Phone 7774 4448.</p>
+</li>
+<li name="1179426">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Semi-detached maisonette enjoying great views of Għadira Bay. Lounge / dining, kitchen / living, two double bedrooms, bathroom / en-suite, side terrace, front balcony. ̈́4&Ucirc;265,000, including a one-car garage. Phone 9905 8577.</p>
+</li>
+<li name="1179427">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEochĦA. Three bedroom, fully furnished maisonette, good sized back yard. ̈́4&Ucirc;och200,000. Phone 9939 5686.</p>
+</li>
+<li name="1179428">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Three bedroom, groundfloor maisonette with yard. Furnished, excluding internal doors. ̈́4&Ucirc;200,000. Phone9946 5014.</p>
+</li>
+<li name="1179429">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Townhouse in need of renovation. Entrance hall, sitting / dining, separate kitchen, three bedrooms, bathroom, good sized back yard. ̈́4&Ucirc;186,500. Phone 9905 8577.</p>
+</li>
+<li name="1179430">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Two bedroom apartment with breathtaking views. ̈́4&Ucirc;129,000 FH. Phone 9916 8156.</p>
+</li>
+<li name="1179431">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MĠARR. Highly finished apartments, exclusive block facing an ODZ area, wide frontage. Completion date June 2018. Starting from ̈́4&Ucirc;205,000. Phone 9981 1981.</p>
+</li>
+<li name="1179432">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MONTEROSA GARDENS. Villa on 320sqm plot. ̈́4&Ucirc;650,000. Phone 9987 3162.</p>
+</li>
+<li name="1179433">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA, football ground area. Terraced house 24ft facade by 82ft. ̈́4&Ucirc;345,000. Phone 9967 0019.</p>
+</li>
+<li name="1179434">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. 200sqm, highly finished three bedroom groundfloor maisonette. ̈́4&Ucirc;280,000 FH. Phone 7906 2949.</p>
+</li>
+<li name="1179435">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Brand new three bedroom apartment. Last unit available in a block of four. ̈́4&Ucirc;175,000. Phone 7942 9239.</p>
+</li>
+<li name="1179436">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Brand new, large, finishedthree bedroom apartments including bathrooms and doors. ̈́4&Ucirc;175,000. Phone 7940 5038.</p>
+</li>
+<li name="1179437">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Eleganttwo bedroom furnished penthouse, views. ̈́4&Ucirc;165,000. Phone 9904 9596.</p>
+</li>
+<li name="1179438">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Five bedroom converted house of character with original features,two cellars, central courtyard. ̈́4&Ucirc;375,000. Phone 7990 0738.</p>
+</li>
+<li name="1179439">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Groundfloor maisonette consisting ofa kitchen / living, two / three bedrooms, bathroom, box room, internal yard and a back terrace. ̈́4&Ucirc;180,000. Phone 9949 1688.</p>
+</li>
+<li name="1179440">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Highly finished three bedroom apartments and penthouse in a secluded area on the outskirts of Mosta. Starting from ̈́4&Ucirc;160,000. Average area 155sqm. Garages available. Phone 7747 5554. </p>
+</li>
+<li name="1179441">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Highly finished, partly furnished penthouse. Three bedrooms, two bathrooms, front / back terraces, roof, airspace. ̈́4&Ucirc;220,000. Phone 9952 3676.</p>
+</li>
+<li name="1179442">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Last remaining, two / three bedroom apartment. ̈́4&Ucirc;145,000. Phone 9967 0019.</p>
+</li>
+<li name="1179443">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. New on the market, facing green area. 180sqm apartment, small block of three. ̈́4&Ucirc;250,000. Phone 9967 0019.</p>
+</li>
+<li name="1179444">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Newly furnished elevated maisonette with back yard, three bedrooms, two-car garage. Phone 9926 4468.</p>
+</li>
+<li name="1179445">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Terraced house, plot 165sqm. Separate living / dining, fitted kitchen / dining, three bedrooms, two bathrooms, three separate yards, washroom, own roof, 7-car garage / car port. ̈́4&Ucirc;445,000. Phone 7774 4448.</p>
+</li>
+<li name="1179446">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA (Victor Denaro Street). Bright, modern, 95sqm, two bedroom apartment, large front balcony. ̈́4&Ucirc;185,000. Phone 9947 6945.</p>
+</li>
+<li name="1179447">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA, just off marina. Modern block. Two bedrooms, third floor, doors / bathrooms included. ̈́4&Ucirc;145,000. Phone 9945 1505.</p>
+</li>
+<li name="1179448">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA. New three bedroom apartment close to university. ̈́4&Ucirc;179,000. Phone 7942 9239.</p>
+</li>
+<li name="1179449">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA. New, two bedroom maisonette close to university. Priced to sell. ̈́4&Ucirc;174,000. Phone 7942 9239.</p>
+</li>
+<li name="1179450">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA. Penthouse. Large front terrace, two bedrooms. Reasonably priced. ̈́4&Ucirc;185,000. Phone 7942 9239.</p>
+</li>
+<li name="1179451">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA. Two bedroom apartment in Msida Circus. ̈́4&Ucirc;195,000. Phone 9942 2782.</p>
+</li>
+<li name="1179452">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA. Two bedroom apartments close to university, sold highly finished. Phone 7777 2982.</p>
+</li>
+<li name="1179453">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MTARFA. Apartment enjoying unobstructed views. Fully furnished. ̈́4&Ucirc;260,000, garage included. Phone 7942 1340.</p>
+</li>
+<li name="1179454">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MTARFA. Price reduced for a quick sale. Three bedroom duplex penthouse with two large terraces enjoying open country views and optional garage. ̈́4&Ucirc;265,000. Phone 7900 5959.</p>
+</li>
+<li name="1179455">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. 120sqm, groundfloor, two bedroom maisonette with 30sqm and space for a pool, being sold on plan and highly finished. ̈́4&Ucirc;295,000. Phone 7906 2949.</p>
+</li>
+<li name="1179456">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. 200sqmground maisonette. Large open plan, three bedrooms, 40sqm back yard. Phone 9949 5041.</p>
+</li>
+<li name="1179457">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. Large, semi-furnished, three bedroom apartment with airspace.̈́4&Ucirc;195,000. Phone 7989 0362.{shapeType</p>
+</li>
+<li name="1179458">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. New finished three bedroom apartment in a block of three served with lift. ̈́4&Ucirc;185,000. Phone 9949 1688.</p>
+</li>
+<li name="1179459">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. Selection of townhouses, houses of character and terraced houses. Phone 9921 2005.</p>
+</li>
+<li name="1179460">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. Three bedroom converted townhouse. Back yard, roof. Sought after area. ̈́4&Ucirc;265,000. Phone 7990 0738.</p>
+</li>
+<li name="1179461">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+NAXXAR. Three bedroom, fully furnished and converted house of character. ̈́4&Ucirc;265,000. Phone 7900 5959.</p>
+</li>
+<li name="1179462">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PAOLA. Apartment. Large open plan, terraces enjoying views. ̈́4&Ucirc;106,000. Phone 9964 4224.</p>
+</li>
+<li name="1179463">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PAOLA. Commercial block, two floors, roof. ̈́4&Ucirc;500,000. Phone 7953 7803.</p>
+</li>
+<li name="1179464">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PAOLA. Large, four bedroom solitary maisonette, full roof. ̈́4&Ucirc;165,000. Phone 9917 0000.</p>
+</li>
+<li name="1179465">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PAOLA. Townhouse over 30m (100ft) garden / yard. Phone 9917 0000.</p>
+</li>
+<li name="1179466">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PENDER GARDENS. Large, highly finished three bedroom apartment being sold partly furnished. ̈́4&Ucirc;535,000. Phone 9949 8660.</p>
+</li>
+<li name="1179467">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PIET&Agrave;. 65sqm, one bedroom apartment, very good area. Great rental investment. ̈́4&Ucirc;117,000. Phone 9934 6806.</p>
+</li>
+<li name="1179468">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PIET&Agrave;. New on the market. Three bedroom apartment, good area. ̈́4&Ucirc;170,000. Phone 9934 6806.</p>
+</li>
+<li name="1179469">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PORTOMASO. Double fronted, two bedroom seafront apartment. Large verandah overlooking marina, one-car garage space. ̈́4&Ucirc;640,000. Phone 9980 1017.</p>
+</li>
+<li name="1179470">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PORTOMASO. Fully furnished, three bedroom / two bathroomapartment, terraceoverlooking the marina. ̈́4&Ucirc;875,000. Phone 7988 3644.</p>
+</li>
+<li name="1179471">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PORTOMASO. Highly finished apartment. Open plan layout leading to a good sized terrace enjoying marina views. ̈́4&Ucirc;450,000. Phone 9995 1541.</p>
+</li>
+<li name="1179472">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PORTOMASO. Sea view apartment, garage. Phone 9982 6551.</p>
+</li>
+<li name="1179473">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA, close to Fra Ben area. Spacious, corner, four bedroom apartment. Sea views from all rooms, large living / dining with terrace, kitchen, pantry, en-suite / bathroom, lift. ̈́4&Ucirc;385,000. Phone 9988 4893.</p>
+</li>
+<li name="1179474">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Fully furnished three bedroom apartment a minute away from the seafront, served with lift. Large open plan kitchen/ living/ dining, three double bedrooms (main with en-suite), main bathroom and a front balcony. ̈́4&Ucirc;285,000. Phone 9958 6828.</p>
+</li>
+<li name="1179475">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Furnished three bedroom apartment. Open plan with a large balcony overlooking country views, master bedroom with an en-suite / walk-in wardrobe, laundry. ̈́4&Ucirc;275,000, including a garage. Phone 9993 9956.</p>
+</li>
+<li name="1179476">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Located in a quiet residential area, south-facing, elevated groundfloor, open plan apartment with fitted kitchen, two bedrooms, box room, two terraces. ̈́4&Ucirc;140,000, garage optional. Phone 9988 4893.</p>
+</li>
+<li name="1179477">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Three bedroom, designer furnished apartment facing green area, good size terrace for BBQ. ̈́4&Ucirc;och295,000. Phone 9939 5686.</p>
+</li>
+<li name="1179478">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Two bedroom, fully furnished apartment, large front terrace. ̈́4&Ucirc;och160,000. Phone 9939 5686.</p>
+</li>
+<li name="1179479">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Two / three bedroom penthouse with distant sea views. Highly finished, including bathrooms / internal doors, large terraces for entertaining. ̈́4&Ucirc;290,000. Phone 9993 9956.</p>
+</li>
+<li name="1179480">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QORMI, San Ġorġ area. Unconverted, two bedroom townhouse, yard. ̈́4&Ucirc;150,000. Phone 9926 8486.</p>
+</li>
+<li name="1179481">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QORMI. Ready to move into apartment. Three bedrooms, bathroom, balconies, roof. ̈́4&Ucirc;138,000. Phone 7980 1965.</p>
+</li>
+<li name="1179482">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QORMI. Unconverted townhouse comprising sitting, study, dining, kitchen, back yard, laundry two bedrooms, bathrooms and more features. ̈́4&Ucirc;160,000. Phone 9981 1981.</p>
+</li>
+<li name="1179483">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QORMI. Unconverted, two bedroom house of character, 30sqm garden. ̈́4&Ucirc;155,000. Phone 9926 8486.</p>
+</li>
+<li name="1179484">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QUI-SI-SANA. Sea view three bedroom apartment minutes away to seafront. ̈́4&Ucirc;385,000. Phone 9945 0385.</p>
+</li>
+<li name="1179485">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+RABAT, limits. Newly built farmhouse on 3,000sqm of land, enjoying views, sold in shell form. Three bedrooms, basement, garage, pool, garden. ̈́4&Ucirc;1,600,000. Phone 9945 0827.</p>
+</li>
+<li name="1179486">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+RABAT. Bargain. Terraced house consisting ofa kitchen / living, separate sittingcan be converted into a one-car garage, two / three bedrooms, small garden, washroom with full roof. ̈́4&Ucirc;265,000. Phone 9949 1688.</p>
+</li>
+<li name="1179487">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+RABAT. Two bedroom, fully finished penthouse enjoying country views. ̈́4&Ucirc;238,000. Phone 9945 0385.</p>
+</li>
+<li name="1179488">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+RABAT / MDINA. Ready to move into, two bedroom converted house of character enjoying beautiful views. Phone 7927 0458.</p>
+</li>
+<li name="1179489">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SALINA. Furnished second floor apartment with sea views and garage. No agents. Phone 9984 9380. </p>
+</li>
+<li name="1179490">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SAN ĠWANN, Monte Rosa Gardens. 300sqm detached villa. Three bedrooms, two bathrooms, surrounding garden, garage. ̈́4&Ucirc;650,000. Phone 9947 6945.</p>
+</li>
+<li name="1179491">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SAN ĠWANN, The Village. Well kept semi-detached villa enjoying valley views. Phone 9926 4468.</p>
+</li>
+<li name="1179492">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SAN ĠWANN. Duplex apartment offered in shell form and on plan. Open plan kitchen / living / dining, double bedroom and two bathrooms. Completion August 2017. ̈́4&Ucirc;140,000. Phone 9958 6828.</p>
+</li>
+<li name="1179493">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SAN ĠWANN. Future super investment. .55ha (five tumoli) in a prime area, including two large rooms with permits. ̈́4&Ucirc;500,000. No agents. Phone 9942 9064.</p>
+</li>
+<li name="1179494">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SAN ĠWANN. Two bedroom, third floor. Fully finished. From ̈́4&Ucirc;165,000. Phone 7945 6423.</p>
+</li>
+<li name="1179495">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SANTA MARIA ESTATE. 1,300sqm plot with permits in hand for four villas. Phone 9921 2005.</p>
+</li>
+<li name="1179496">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SENGLEA (L-Isla). 23sqmtake-away, main square.̈́4&Ucirc;89,000. Phone 7926 7558.</p>
+</li>
+<li name="1179497">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SENGLEA (L-Isla). Rental investment. Possibly nine bedroom guesthouse. ̈́4&Ucirc;375,000.Phone 7989 0362.</p>
+</li>
+<li name="1179498">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SENGLEA(L-Isla). Three bedroom townhouse, large living space. Super investment. Priced for fast sale, ̈́4&Ucirc;170,000.Phone owner 9988 5783. </p>
+</li>
+<li name="1179499">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SENGLEA. Six bedroom house with Valletta views. Occupied by tenants, modern furniture, space for a wine bar. ̈́4&Ucirc;960,000. Phone 7978 8888.</p>
+</li>
+<li name="1179500">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SIĠĠIEWI. Site for development in 4+1 area for eight units. ̈́4&Ucirc;398,000. Phone 9902 5762.</p>
+</li>
+<li name="1179501">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SIĠĠIEWI. Solitary, three bedroom maisonette in shell form, full roof. ̈́4&Ucirc;190,000. Phone 9949 5041.</p>
+</li>
+<li name="1179502">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA (Amery Street). Apartment near seafront. Three bedrooms, two bathrooms, internal yard and a back yard. Needs modernising, could split in two for rental purposes. ̈́4&Ucirc;330,000. Phone 7934 3333.</p>
+</li>
+<li name="1179503">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA (Tower Road). Regretfully for sale, designer finished, spacious apartment.Phone 9982 6551.</p>
+</li>
+<li name="1179504">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA, Tigne&#039; seafront. 140sqm apartment, views to Valletta. Front balcony, spacious lounge / living, separate kitchen, three bedrooms, two bathrooms. ̈́4&Ucirc;555,000. Phone 9947 6945.</p>
+</li>
+<li name="1179505">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. 170sqm, three bedroom apartment with 23sqm back terrace. Phone 9982 6551.</p>
+</li>
+<li name="1179506">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. A large, double fronted townhouse on one of the best streets in Sliema. Four large double bedrooms, large entrance hall leading into open plan, study, airspace. Great family home. ̈́4&Ucirc;1,400,000. Phone 7999 8964.</p>
+</li>
+<li name="1179507">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Brand new, two bedroom apartment seconds from seafront. Fantastic rental investment. ̈́4&Ucirc;269,000. Phone 9988 7497.</p>
+</li>
+<li name="1179508">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Brand new, two bedroom maisonette seconds from seafront, back yard. ̈́4&Ucirc;315,000. Phone 9988 7497.</p>
+</li>
+<li name="1179509">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Car space for small vehicle. Off seafront. Bargain. ̈́4&Ucirc;23,000.Phone owner7707 9007. </p>
+</li>
+<li name="1179510">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Four floor, fully furnished traditional Maltese townhouse a few metres from seafront. Six bedrooms, full airspace, terrace. ̈́4&Ucirc;550,000. Phone Olga 9955 1541.</p>
+</li>
+<li name="1179511">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Highly finished, furnished, central, 157sqm three bedroom apartment, garage. Rentable. ̈́4&Ucirc;450,000. Phone 9949 1115.</p>
+</li>
+<li name="1179512">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Large three bedroom flat. ̈́4&Ucirc;360,000. No agents. Phone 7928 4326.</p>
+</li>
+<li name="1179513">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Maisonette. Three bedrooms, back yard. ̈́4&Ucirc;410,000, garage included. Phone 7942 1340.</p>
+</li>
+<li name="1179514">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Over 200sqm three bedroom apartment, block of six, served with lift. Spacious and sunny kitchen / living / dining with terrace. ̈́4&Ucirc;465,000, garage space included. Phone 9982 2666.</p>
+</li>
+<li name="1179515">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Seafront 250sqm apartment, square layout, sunny side of Tower Road. Suspended ceiling. ̈́4&Ucirc;1,250,000, includes two car spaces. No agents. Phone 9943 6089.</p>
+</li>
+<li name="1179516">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Seventh floor, three double bedroom, highly finishedwith car space. ̈́4&Ucirc;388,000. Phone 7970 7943.</p>
+</li>
+<li name="1179517">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Spacious townhouse consisting of an entrance, sitting room, dining, fitted kitchen, bright sitting / dining overlooking a 300sqm mature garden with deck area, pool, three double bedrooms (main with en-suite), large terrace, two-car interconnected garage. ̈́4&Ucirc;1,400,000. Phone 7999 8964.</p>
+</li>
+<li name="1179518">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Townhouse. Three bedrooms, roof garden plus airspace. Great investment in a prime area. ̈́4&Ucirc;225,000. Phone 7942 1901.</p>
+</li>
+<li name="1179519">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. Two bedroom, finished apartment. ̈́4&Ucirc;220,000. Phone 7970 8080.</p>
+</li>
+<li name="1179520">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS, Balluta area. Large, 150sqm apartment enjoying sea views, located in a prime area. ̈́4&Ucirc;475,000. Phone 7942 1901.</p>
+</li>
+<li name="1179521">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS, Pender Gardens. Opportunity. Four bedroom apartment split in five units for rental purposes. All with en-suite and kitchenette. Highly furnished. ̈́4&Ucirc;625,000. Phone 7934 3333. </p>
+</li>
+<li name="1179522">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS,Paceville. Two-car garage. Only ̈́4&Ucirc;32,000.Phone owner 7707 9007. </p>
+</li>
+<li name="1179523">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. 200sqm three bedroom apartment including a two-car lock-up garage. Ready to move in. ̈́4&Ucirc;310,000 FH. Phone 7777 2982.</p>
+</li>
+<li name="1179524">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. 200sqm three double bedroom apartment ̈́4&Ucirc;285,000. Two-car garage ̈́4&Ucirc;30,000. Phone 9942 2782.</p>
+</li>
+<li name="1179525">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Corner, 110sqm site. Permits applied for basement stores, ground floor Class 4D shops with toilets, six floors of offices. Prime location. ̈́4&Ucirc;1,800,000. Phone 9945 0827.</p>
+</li>
+<li name="1179526">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Fully furnished and ready to move into three bedroom apartment, en-suite. Large outdoor terrace, Garage. ̈́4&Ucirc;340,000. Phone 9944 4046.</p>
+</li>
+<li name="1179527">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Fully furnished two bedroom apartment with air-conditioners and car space. Superb rental investment. ̈́4&Ucirc;360,000. No agents. Phone 9942 7491.</p>
+</li>
+<li name="1179528">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. Three bedroom, large partly furnished maisonette. ̈́4&Ucirc;350,000. Phone 7970 8080.</p>
+</li>
+<li name="1179529">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY, close to waterpolo pitch. Furnished two bedroom apartment. ̈́4&Ucirc;och147,000. Phone 7942 7813.</p>
+</li>
+<li name="1179530">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY, Sirens area. Highly finished / fully furnished, fourth floor seafront apartment. Hall leading to a spacious open plan, fitted kitchen / living / dining room, three bedrooms, main bedroom with en-suite, main bathroom. ̈́4&Ucirc;460,000, one-car space included. Phone 9988 4893.</p>
+</li>
+<li name="1179531">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY. Retail shop for Hairdresser, Stationery, etc. 35sqm Only ̈́4&Ucirc;58,000.Phone owner9988 5783.</p>
+</li>
+<li name="1179532">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY. Duplex maisonette with sea views, being sold furnished. ̈́4&Ucirc;245,000. Phone 7942 9239.</p>
+</li>
+<li name="1179533">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY. First floor partly furnished apartment. Open plan leads to a good sized terrace, three bedrooms, bathroom / en-suite, box room, front balcony. ̈́4&Ucirc;185,000. Phone 9945 0827.</p>
+</li>
+<li name="1179534">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY. New, highly finished, three bedroom apartment. Main with en-suite, spacious living, kitchen / dining, well sized balcony. ̈́4&Ucirc;165,000. Phone 9995 7770.</p>
+</li>
+<li name="1179535">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY. On plan, a choice of apartments / penthouse to be sold highly finished. Separate kitchen, living / dining, two bedrooms. Starting from ̈́4&Ucirc;135,000. Phone 9980 1702.</p>
+</li>
+<li name="1179536">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST VENERA. New on the market. Selection of spacious maisonettes and apartments set in a villa area. Starting from ̈́4&Ucirc;160,000, garages optional. Phone owner 7945 3712.</p>
+</li>
+<li name="1179537">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST VENERA. Plot measuring 11.28 x 31.09 (340sqm with permits for eight apartments and two three bedroom penthouses plus garages). ̈́4&Ucirc;650,000. Phone 9947 6949.</p>
+</li>
+<li name="1179538">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWATAR. 130sqm, finished, third floor three bedroom apartment. ̈́4&Ucirc;170,000. Phone 7945 6423.</p>
+</li>
+<li name="1179539">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWATAR. Three bedroom apartment direct from owner. Can be converted into four bedrooms. Starting from ̈́4&Ucirc;och155,000. Phone 7937 3415.</p>
+</li>
+<li name="1179540">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWATAR. Two bedroom penthouse, south facing views. Direct from owner. ̈́4&Ucirc;och210,000. Phone 7937 3415.</p>
+</li>
+<li name="1179541">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. 135sqm three bedroom apartment being sold on plan. Date of completion approximately by July 2017. Being sold finished. ̈́4&Ucirc;390,000, lock-up garage included in price. Phone 7999 8964.</p>
+</li>
+<li name="1179542">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. A designer, 600sqm, corner, shell form, fully detached, bungalow enjoying superb views. Extremely bright and airy. semi-basement. with garden and independent flatlet. A one-off. ̈́4&Ucirc;1,175,000. No agents. Phone 7949 0063.</p>
+</li>
+<li name="1179543">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. Duplex, four bedroom apartment Finished to high standards, including bathrooms and doors. ̈́4&Ucirc;420,000. Phone 7930 2133.</p>
+</li>
+<li name="1179544">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. Large three double bedroom apartment. Large back yard measuring 65sqm, with mature trees. ̈́4&Ucirc;340,000, two-car street level garage included. Phone 9980 1017.</p>
+</li>
+<li name="1179545">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. Last, 144sqm, finished three bedroom apartment in a new block. ̈́4&Ucirc;325,000. Phone 7970 7943.</p>
+</li>
+<li name="1179546">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. Three bedroom beautiful penthouse in lovely area. ̈́4&Ucirc;395,000. Phone 7927 0458.</p>
+</li>
+<li name="1179547">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SWIEQI. Three bedroom first floor maisonette including garage. Only ̈́4&Ucirc;325,000. Use of roof. Phone 7927 0458.</p>
+</li>
+<li name="1179548">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TA&#039; PARIS. Solitary first floor maisonette, built area 13.2m (44ft) x 16.5m (55ft), having full overlying airspace facing open unobstructed open space. Suitable also for development. ̈́4&Ucirc;300,000. Adjacent to property is an optional street level two-car garage with storage room and drive at an extra cost. Phone owner 9990 7484.</p>
+</li>
+<li name="1179549">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TAL-IBRAĠ. Elevated terraced house, built area 133sqm. ̈́4&Ucirc;450,000. Phone 7930 2133.</p>
+</li>
+<li name="1179550">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TARXIEN. Four bedroom terraced house, yard. ̈́4&Ucirc;380,000. Phone 7970 7879.</p>
+</li>
+<li name="1179551">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TARXIEN. Large, beautiful, three bedroom terraced house, garden, garage. ̈́4&Ucirc;325,000. Phone 7970 7879.</p>
+</li>
+<li name="1179552">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TARXIEN. Large, furnished, double fronted 300sqm terraced house. ̈́4&Ucirc;730,000. Phone 7970 7879.</p>
+</li>
+<li name="1179553">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TARXIEN. Over 150sqm, highly finished, three bedroom apartment, large terrace. ̈́4&Ucirc;154,000. Phone 9917 0000.</p>
+</li>
+<li name="1179554">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TARXIEN. Terraced house. One-car garage, back garden, three bedrooms. ̈́4&Ucirc;325,000. Phone 7970 7879.</p>
+</li>
+<li name="1179555">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TARXIEN. Three bedroom terraced house, unobstructed views, massive roof. ̈́4&Ucirc;345,000. Phone 7970 7879.</p>
+</li>
+<li name="1179556">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TARXIEN. Three bedroom townhouse. Swimming pool, spacious accommodation. ̈́4&Ucirc;435,000. Phone 7970 7879.</p>
+</li>
+<li name="1179557">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TAS-SELLUM. Duplex penthouse. Three bedrooms with outstanding sea view. ̈́4&Ucirc;710,000. Comes highly finished with one-car garage. Phone Olga 9955 1541.</p>
+</li>
+<li name="1179558">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+THE VILLAGE. Highly finished, 125sqm three bedroom apartment with distant sea views. Great location. ̈́4&Ucirc;275,000. Phone 7942 1901.</p>
+</li>
+<li name="1179559">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+THREE BEDROOM apartment being sold in shell form. ̈́4&Ucirc;100,000. Phone 9942 2782.</p>
+</li>
+<li name="1179560">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TIGN&Eacute; POINT. Highly finished three bedroom apartment. Prestigious development, communal pool, two-car lock-up garage. ̈́4&Ucirc;950,000. Phone 9988 7497.</p>
+</li>
+<li name="1179561">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+VALLETTA. Four bedroom, beautifully converted palazzo with pool. ̈́4&Ucirc;1,880,000. Phone 9970 0300.</p>
+</li>
+<li name="1179562">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+VALLETTA. Second floor, two bedroom apartment, new block. Kitchen / living / dining, bathroom and en-suite shower. On plan. ̈́4&Ucirc;275,000. Phone 7970 1937.</p>
+</li>
+<li name="1179563">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+VICTORIA GARDENS. Three bedroom bungalow with pool and flatlet. ̈́4&Ucirc;1,650,000. Phone 9970 0300. </p>
+</li>
+<li name="1179564">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+XEMXIJA. Villa with sea views in the best part of Xemxija. Phone 9977 0419.</p>
+</li>
+<li name="1179565">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+XGĦAJRA. Ground, three bedroom apartment in shell form, near seafront. ̈́4&Ucirc;138,000. Phone 7953 7803.</p>
+</li>
+<li name="1179566">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+XGĦAJRA. House of character. 170sqm garden, 10-car drive-in, garage. ̈́4&Ucirc;750,000. Phone 9972 7242.</p>
+</li>
+<li name="1179567">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+XGĦAJRA. Unobstructed seafront apartment. Three bedrooms, balcony, fully air-conditioned, lift. ̈́4&Ucirc;275,000. Phone 7980 1965.</p>
+</li>
+<li name="1179568">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+XGĦAJRA. Well kept three bedroom terraced house with four-car garage. Phone9904 9596.</p>
+</li>
+<li name="1179569">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR, St Peter&#039; s. Terraced house. Sitting, dining, kitchen, large yard, three bedrooms, garage. ̈́4&Ucirc;315,000. Phone 7993 6413.</p>
+</li>
+<li name="1179570">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. A rare 282sqm maisonette. Four double bedrooms, study, huge yard. ̈́4&Ucirc;230,000. Phone 7993 6413.</p>
+</li>
+<li name="1179571">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. Exceptionally finished terraced house. Three bedrooms, five-car garage. ̈́4&Ucirc;360,000. Phone 7993 6413.</p>
+</li>
+<li name="1179572">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. Extremely large, highly finished, three bedroom / two bathroom penthouse, enormous terrace. ̈́4&Ucirc;280,000. Phone 9917 0000.</p>
+</li>
+<li name="1179573">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. Highly finished maisonettes / apartments, two / three bedrooms, back terrace. From ̈́4&Ucirc;128,000. Phone 9972 7242.</p>
+</li>
+<li name="1179574">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. Large duplex maisonette with roof, three / four bedrooms. ̈́4&Ucirc;220,000. Phone 7993 6413.</p>
+</li>
+<li name="1179575">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. Large penthouse, elegant block, large corner terraces. Good value. ̈́4&Ucirc;85,000. Phone 9964 4224.</p>
+</li>
+<li name="1179576">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. Modern, highly finished, three bedroom apartment with roof. Must be seen. Phone 9964 4224.</p>
+</li>
+<li name="1179577">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. Two bedroom apartment being sold fully furnished. ̈́4&Ucirc;105,000. Phone 7703 6425.</p>
+</li>
+<li name="1179578">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBIEGĦ. New, highly finished three bedroom penthouse with pool, garage and terrace with unobstructed view. ̈́4&Ucirc;350,000. Phone 9949 1688.</p>
+</li>
+<li name="1179579">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBIEGĦ. Very well sized, 230sqm apartment. Large living, kitchen / dining, three bedrooms, bathroom / en-suite / walk-in wardrobe, study, washroom, front terrace / back balcony. ̈́4&Ucirc;225,000. Phone 7774 4448.</p>
+</li>
+<li name="1179580">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Double fronted terraced house comprising kitchen/ living/ dining, three double bedrooms, balcony and a terrace. This property comes with a full roof and lovely country views. ̈́4&Ucirc;245,000 FH, two-car street level garage included. Phone 7703 4941.</p>
+</li>
+<li name="1179581">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Finished, 137sqm, three bedroom apartment, large terraces. ̈́4&Ucirc;170,000. Phone 9902 5762.</p>
+</li>
+<li name="1179582">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Finished, three bedroom maisonettewith study. ̈́4&Ucirc;170,000. Phone 9902 5762.</p>
+</li>
+<li name="1179583">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Highly finished and ready to move into, triple fronted three bedroom house of character with courtyard or terrace. Ideal family home. Easy parking. Many extras. ̈́4&Ucirc;410,000. No agents. Phone 7949 0063. </p>
+</li>
+<li name="1179584">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Ready to move into, two bedroom apartment with roof and washroom. Phone 9926 4468. </p>
+</li>
+<li name="1179585">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Shop ideal as a tattoo business / nails. Rental price. Negotiable. Phone 7953 7803.</p>
+</li>
+<li name="1179586">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Solitary, duplex, spacious three bedroom maisonette, own roof. ̈́4&Ucirc;280,000. Phone owner 7702 5131.</p>
+</li>
+<li name="1179587">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Terraced house in the heart of this lovely village, consisting of three double bedrooms. It also has a groundfloor garage. ̈́4&Ucirc;345,000. Phone 7703 4941.</p>
+</li>
+<li name="1179588">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Three bedroom, designer finished apartment being sold partly furnished. ̈́4&Ucirc;230,000. Phone 7952 4407.</p>
+</li>
+<li name="1179589">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBUĠ. Two / three bedroom converted townhouse. Back yard, cellar, well. ̈́4&Ucirc;129,000. Phone 7990 0738.</p>
+</li>
+<li name="1179590">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Charming house of character. Large courtyard, unique en-suite. ̈́4&Ucirc;285,000. Phone 9964 4224.</p>
+</li>
+<li name="1179591">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Duplex maisonette. Own roof, three bedrooms. Being sold furnished. ̈́4&Ucirc;180,000. Phone 7703 6425. </p>
+</li>
+<li name="1179592">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Highly finished large house of character, garage, office. ̈́4&Ucirc;395,000. Phone 9964 4224.</p>
+</li>
+<li name="1179593">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Large, furnished, three bedroom / two bathroom maisonette with roof garden. ̈́4&Ucirc;196,000. Phone 9917 0000.</p>
+</li>
+<li name="1179594">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. New, highly finished, three bedroom apartments opposite green area. ̈́4&Ucirc;142,000. Phone 9982 6155.</p>
+</li>
+<li name="1179595">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Semi-detached house of character. Three double bedrooms, full airspace, cellar. ̈́4&Ucirc;149,000. Phone 7970 7879.</p>
+</li>
+<li name="1179596">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Solitary, three bedroom maisonette, quiet area. ̈́4&Ucirc;139,000. Phone 7703 6425.</p>
+</li>
+<li name="1179597">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Two bedroom finished apartment. ̈́4&Ucirc;95,000. Phone 9946 7721.</p>
+</li>
+<li name="1179598">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Two bedroom fully finished apartment. ̈́4&Ucirc;95,000. Phone 7703 6425.</p>
+</li>
+<li name="1179599">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Two bedroom townhouse with interconnecting garage. ̈́4&Ucirc;255,000. Phone 7953 7803.</p>
+</li>
+<li name="1179600">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Two double bedroom house of character full of features. ̈́4&Ucirc;100,000. Phone 7970 7879.</p>
+</li>
+<li name="1179601">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. Unconverted farmhouse with many rooms, approximately 450sqm. ̈́4&Ucirc;490,000. Phone 7771 5551.</p>
+</li>
+<li name="1179602">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻONQOR. Groundfloor, three bedroom, luxury finished maisonette, quiet area. ̈́4&Ucirc;235,000. Phone 7703 6425.</p>
+</li>
+<li name="1179603">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻURRIEQ. Finished two bedroom penthouse smart block of four, views, lift. ̈́4&Ucirc;och150,000. Phone 9928 7339.</p>
+</li>
+<li name="1179604">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻURRIEQ. Highly finished, ready to move into maisonette. ̈́4&Ucirc;190,000. Phone 7904 4543.</p>
+</li>
+<li name="1179605">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻURRIEQ. Larger than usual, three double bedroom solitary maisonette. ̈́4&Ucirc;270,000. Phone 7904 4543. </p>
+</li>
+<li name="1179606">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻURRIEQ. New, ready built apartment having two double bedrooms, kitchen, large open plan. Bargain, ̈́4&Ucirc;115,000.Phone owner7944 5991.</p>
+</li>
+<li name="1179607">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻURRIEQ. Three double bedroom, fully furnished apartment. Must be seen. ̈́4&Ucirc;196,000. Phone 7904 4543.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Saturday, December 31, 2016</h2>
+<ul class="classified_list">
+<li name="1179298">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179299">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES for sale on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0026, 7979 8282.</p>
+</li>
+<li name="1179300">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MANIKATA. Fully finished new apartment, large terrace, amazing views. &euro;220,000. Phone 9905 1113.</p>
+</li>
+<li name="1179301">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Four bedroom semi-detached maisonette, huge outdoor area. &euro;350,000. Phone 9940 7275.</p>
+</li>
+<li name="1179302">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. New, finished, two bedroom / two bathroom penthouse, views. &euro;190,000. Phone 9942 4194.</p>
+</li>
+<li name="1179303">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MELLIEĦA. Townhouse. Four bedrooms, roof, garage. Unique opportunity. &euro;330,000. Phone 9911 5070.</p>
+</li>
+<li name="1179304">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. New two bedroom apartment, including garage, sold finished. &euro;135,000. Phone 7953 3254.</p>
+</li>
+<li name="1179305">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Three bedroom maisonette, one-car garage, 30sqm yard. &euro;240,000. Phone 7953 3254.</p>
+</li>
+<li name="1179306">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. Two bedroom furnished apartment including car space. &euro;125,000. Phone 9940 7275.</p>
+</li>
+<li name="1179307">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY, Gillieru area. Four bedroom apartment, side-sea view, terrace. &euro;211, 900. Phone 9911 5070.</p>
+</li>
+<li name="1179308">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY, Gillieru area. Large, three bedroom partly furnished apartment. &euro;165,000. Phone 9905 1113.</p>
+</li>
+<li name="1179309">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY, near seafront. Large, two / three bedroom apartment. &euro;135,000. Phone 7905 5248.</p>
+</li>
+<li name="1179310">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST PAUL&#039; S BAY. New two bedroom penthouse, sea views, close to seafront. &euro;250,000. Phone 7905 5248.</p>
+</li>
+<li name="1179311">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEBBIEGĦ. Three bedroom, fully finished apartment, large balcony. &euro;190,000 FH. Phone 9942 4194.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Friday, December 30, 2016</h2>
+<ul class="classified_list">
+<li name="1179281">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179282">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES for sale on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0028, 7944 6072.</p>
+</li>
+<li name="1179283">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦARGĦUR. Three bedroom apartment in quiet street. &euro;265,000, including garage. Phone 7940 5038.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Thursday, December 29, 2016</h2>
+<ul class="classified_list">
+<li name="1179263">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179264">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES for sale on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0010, 7900 8287.</p>
+</li>
+<li name="1179265">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BIRKIRKARA. &euro;185,000. Terraced house, 3.90 x 20.10m (13 x 67ft),situated in quiet area. Phone 9947 1222.</p>
+</li>
+<li name="1179266">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, GĦARB. Groundfloor apartment being sold partly furnished. Three double bedrooms, good sized back yard and optional two-car garage. Priced to sell, &euro;135,000. Phone 7988 7780.</p>
+</li>
+<li name="1179267">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, MARSALFORN. Three bedroom apartment suitable as holiday flat or residential. Priced to sell, &euro;92,000. Phone 9947 6959.</p>
+</li>
+<li name="1179268">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, NADUR. First floor apartment being sold furnished. Two large double bedrooms, back yard and BBQ area. Ideal for first time buyers. &euro;155,000. Phone 9949 2695.</p>
+</li>
+<li name="1179269">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. &euro;110,000. Elevated, two bedroom furnished maisonette. Phone Ivan Hammett 9947 1222.</p>
+</li>
+<li name="1179270">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MARSASCALA. &euro;157,000. Finished, three bedroom apartment with solid fitted kitchen. Phone 9947 1222.</p>
+</li>
+<li name="1179271">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MOSTA. Large, partly furnished three bedroom apartment with part ownership of roof. &euro;193,000. Phone 7940 5038.</p>
+</li>
+<li name="1179272">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻABBAR. &euro;315,000. Terraced house. Four bedrooms, kitchen / dining, living, garage. Phone 9947 1222. </p>
+</li>
+<li name="1179273">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ŻEJTUN. &euro;285,000. House on one floor, with two garages. Phone 9947 1222.</p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Wednesday, December 28, 2016</h2>
+<ul class="classified_list">
+<li name="1179240">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179241">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES for sale on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0028, 7944 6072.</p>
+</li>
+<li name="1179242">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦARGĦUR. Large, completely finished three bedroom apartment including bathrooms and doors. &euro;197,000. Phone 7940 5038.</p>
+</li>
+<li name="1179243">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, GĦAJNSIELEM. 154sqm plot for three bedroom house. Permits within five months. &euro;160,000. Phone 7749 1115.</p>
+</li>
+<li name="1179244">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, MARSALFORN. Seafront, shell, two bedroom penthouse. Terrace, balcony, lift. Common parts ready. &euro;198,000. Phone 7967 9111.</p>
+</li>
+<li name="1179245">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+MSIDA. Finished, two bedroom penthouse, lift. Common parts ready. Terrace, Valletta views, balcony. &euro;190,000. Phone 9949 1115.</p>
+</li>
+<li name="1179246">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+PORTOMASO. Fully furnished, three bedroom / two bathroom apartment, terraceoverlooking the marina. &euro;875,000. Phone 7988 3644.</p>
+</li>
+<li name="1179247">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+QAWRA. New, maisonette sold finished. &euro;147,000. Phone 7786 8677. </p>
+</li>
+</ul>
+<h2 class="classified_date default_top_margin">Tuesday, December 27, 2016</h2>
+<ul class="classified_list">
+<li name="1179209">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+100% FOCUSED on quality properties. Excel Homes Real Estate Ltd. www.Excel.com.mt Phone 9945 1255, 2141 3355.</p>
+</li>
+<li name="1179210">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+17,397 PROPERTIES for sale on Malta&#039; s best rated property website: www.simonestates.com Phone 2388 0010, 7900 8287.</p>
+</li>
+<li name="1179211">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+BAĦAR IĊ-ĊAGĦAQ. Brand new three bedroom apartment. Spacious front terrace, unobstructed country / sea views. &euro;265,000. Phone 9980 1017.</p>
+</li>
+<li name="1179212">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+FGURA (Żabbar Road). Site with permits, 7.1 x 22.5m (27 x 75&#039; ). &euro;330,000. Phone 7947 0510.</p>
+</li>
+<li name="1179213">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GĦAXAQ. Three bedroom terraced house in shell form. &euro;198,500. Phone 7947 0510.</p>
+</li>
+<li name="1179214">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, GĦASRI. Groundfloor two bedroom apartment enjoying landscaped gardens and a good sized communal pool. Not to be missed. &euro;165,000. Phone 7947 0419.</p>
+</li>
+<li name="1179215">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, SANNAT. Beautifully restored house of character. Three bedrooms, stunning pool deck area. Ideal for investment. Must see. &euro;395,000. Phone 9947 6959.</p>
+</li>
+<li name="1179216">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GOZO, ŻEBBUĠ. Three double bedroom apartment enjoying country and sea views, being sold fully furnished. &euro;200,000. Phone 9949 2695.</p>
+</li>
+<li name="1179217">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+GŻIRA. Large, three bedroom partly furnished apartment. &euro;199,000. Phone 7940 5038.</p>
+</li>
+<li name="1179218">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+KAPPARA. Shell form semi-detached villa. Four bedrooms, space for pool, approx. 430sqm. Phone 9942 3070.</p>
+</li>
+<li name="1179219">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+LIJA. Two bedroom maisonette with back yard, including a two-car garage. &euro;197,000. Phone 7972 8893.</p>
+</li>
+<li name="1179220">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA, Tign&eacute; Point. Apartment directly on the seafront. Three bedrooms, super finish, garage, great views. &euro;1,350,000. Phone 9942 3070.</p>
+</li>
+<li name="1179221">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+SLIEMA. On plan, seconds from the seafront. A selection of one and two bedroom apartments starting from &euro;179,000. Excellent rental investments.Phone 9942 3070.</p>
+</li>
+<li name="1179222">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+ST JULIANS. On plan, fully finished apartment with immaculate valley and part sea views. Excellent rental investment. &euro;245,000. Phone 9942 3070.</p>
+</li>
+<li name="1179223">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TAL-IBRAĠ. Terraced house. Three double bedrooms, roof and underlying five-car garage. &euro;450,000. Phone 7972 8893.</p>
+</li>
+<li name="1179224">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TIGN&Eacute; POINT. Best value for money. Two / three bedroom, fully designer furnished apartment with massive garden, garage. &euro;695,000.Phone 9942 3070.</p>
+</li>
+<li name="1179225">
+<p>
+<span><a href="http://www.timesofmalta.com/classifieds/property-for-sale">Property For Sale</a></span>
+TIGN&Eacute; POINT. One bedroom, fully furnished apartment including car space. Priced for a quick sale. Phone 9942 3070.</p>
+</li>
+</div>
+<div id="section_extras_section" class="grid_4 default_top_margin">
+<div class="ad_rectangle ad">
+<span>Advert</span>
+ 
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-4" style="width:300px; height:250px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-4'); });
+-->
+</script>
+</div>
+<div id="widget_remax" class="section_box default_top_margin ">
+<div class="section_box_title rounded_border_top">
+<h2>
+<a href="http://www.remax-malta.com/" target="_blank" title="Real Estate in Malta">
+<span class="title">Real Estate in Malta by</span>
+<img src="/img/remax_logo.png" alt="Real Estate in Malta"/> </a>
+<br class="clear"/>
+</h2>
+</div>
+<div class="section_box_content remax_widget">
+<iframe src="https://serve.remax-malta.com/widget/times/" width="100%" height="190px" scrolling="no" frameborder="0"></iframe>
+</div>
+</div>
+<div id="widget_aps" class="section_box default_top_margin ">
+<div class="section_box_title rounded_border_top">
+<h2>
+<a href="https://yourhome.apsbank.com.mt/" target="_blank" title="APS Home Loan Calculator">
+<span class="title">Home Loan Calculator</span>
+<img src="/img/ApsLogoWeb.png" alt="Home Loan Calculator"/> </a>
+<br class="clear"/>
+</h2>
+</div>
+<div class="section_box_content remax_widget">
+<iframe src="https://yourhome.apsbank.com.mt/widget.php" width="100%" height="190px" scrolling="no" frameborder="0"></iframe>
+</div>
+</div>
+<div id="widget_most_viewed" class="widget_most section_box default_top_margin ">
+<div class="section_box_title rounded_border_top">
+<h2>Popular Stories</h2>
+<a href="http://www.timesofmalta.com/rss/property for sale/views" class="rss_widget"><img src="/img/rss_icon.png" alt="Popular Stories RSS Feed"/></a> </div>
+<div class="section_box_content">
+<ol class="section_box_stories">
+<li class="count"><h3><a href="/articles/view/20170102/local/the-weather-too-cold-for-you-its-set-to-get-colder.635488">The weather&#039;s too cold for you? It&#039;s set...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170102/local/motorcyclist-dies-in-mosta-crash.635445">Motorcyclist, 26, dies in Mosta crash</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170101/local/new-year-new-rules-the-things-you-can-and-cannot-do-as-of-today.635289">New year, new rules: the things you can...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170102/local/gozo-just-got-more-beautiful.635484">Watch: Rare sight in Gozo as swans land...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170102/local/secret-power-station-buyout-deal-kept-hidden-away.635290">Secret power station buyout deal kept...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170102/local/300-have-disappeared-from-school-and-work.635437">300 have ‘disappeared’ from school and work </a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170103/local/afriqiyah-airways-hijackers-not-seeking-asylum-opm.635508">Malta hijackers not seeking asylum - OPM</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170102/local/parents-claim-son-was-assaulted-by-policemen-police-say-he-violently.635490">Parents claim son was assaulted by...</a></h3></li>
+<li class="count"><h3><a href="/articles/view/20170103/local/boy-6-among-five-hurt-in-gozo-traffic-accident.635551">Boy, 6, among five hurt in Gozo traffic...</a></h3></li>
+</ol>
+</div>
+</div>
+<div class="ad_rectangle default_top_margin ad">
+<span>Advert</span>
+ 
+ 
+ 
+ <div id="div-gpt-ad-1344004379057-3" style="width:300px; height:250px"></div>
+<script type="text/javascript">
+<!--
+	googletag.cmd.push(function() { googletag.display('div-gpt-ad-1344004379057-3'); });
+-->
+</script>
+</div>
+</div>
+</div>
+<div class="grid_12 default_top_margin">
+<div class="section_divider"></div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+<div class="grid_11">
+<a href="/cdn-cgi/l/email-protection#533e2a3d36242013273a3e36203c353e323f27327d303c3e">Send us your story</a> |
+<a href="/terms">Terms &amp; Conditions</a> |
+<a href="/privacypolicy">Privacy Policy</a> |
+<a href="/comments">Comments Policy</a> |
+<a href="/files/print-rate-card.pdf?2015-02-19">Print Ad Rate</a> |
+<a href="/files/online-rate-card.pdf">Online Ad Rate</a> |
+<a href="/contact">Contact us</a> |
+</div>
+<div class="grid_1">
+<div class="social-media socialmedia_wrapper_right">
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_facebook_follow"></a>
+<a class="addthis_button_twitter_follow"></a>
+<a class="addthis_button_rss_follow"></a>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="text_center">
+<p class="text_center">Copyright &copy; 2017 timesofmalta.com</p>
+</div>
+</div>
+<p class="print_disclaimer">Copyright &copy; Allied Newspapers Ltd., printed on - 03-01-2017 -
+Printed content is for personal use only, and should not be distributed</p>
+<div class="top-home-icon-container">
+<div id="to-top-icon"> </div>
+<div id="to-home-icon"> </div>
+</div>
+</div>
+<script type="text/javascript" src="/min/a.js?v=446"></script><!--[if gt IE 6]>
+<![endif]-->
+<script type="text/javascript" src="/js/behaviour/classifieds.js?v=446"></script>
+<script type="text/javascript" src="/min/b.js?v=446"></script>
+<script type="text/javascript" src="/min/s.js?v=446"></script>
+<script type="text/javascript" src="/min/d.js?v=446"></script><script>TOM.script.runBehaviours(["classifieds","cookiebar","top_home_icon","oauth_login","social_links","frontend"]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"80cdbc66c5","applicationID":"2212732","transactionName":"b1ZSYUpQDBICBUVZV1YccVZMWA0PTAVdUUtLWlZcXVURThUPVEdLXVBEXFdf","queueTime":0,"applicationTime":148,"atts":"QxFRFwJKHxw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>

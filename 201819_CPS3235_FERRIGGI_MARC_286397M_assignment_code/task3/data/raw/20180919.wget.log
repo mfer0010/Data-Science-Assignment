@@ -1,0 +1,4 @@
+URL transformed to HTTPS due to an HSTS policy
+--2018-09-19 12:54:51--  https://www.timesofmalta.com/classifieds/property-for-sale
+Resolving www.timesofmalta.com (www.timesofmalta.com)... failed: Name or service not known.
+wget: unable to resolve host address ‘www.timesofmalta.com’

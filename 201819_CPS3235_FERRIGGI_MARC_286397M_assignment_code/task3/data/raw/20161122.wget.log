@@ -1,0 +1,15 @@
+--2016-11-22 09:55:46--  http://www.timesofmalta.com/classifieds/property-for-sale
+Resolving www.timesofmalta.com (www.timesofmalta.com)... 104.20.59.125, 104.20.60.125
+Connecting to www.timesofmalta.com (www.timesofmalta.com)|104.20.59.125|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: '/mnt/hd2/home/jp/projects/tom_prop_4_sale/data/20161122_prop_for_sale_tom_classifieds.html'
+
+     0K .......... .......... .......... .......... ..........  346K
+    50K .......... .......... .......... .......... ..........  488K
+   100K .......... .......... .......... .......... ..........  929K
+   150K .......... .......... .......... .......... .......... 1.03M
+   200K .......... ......                                       477K=0.4s
+
+2016-11-22 09:55:47 (566 KB/s) - '/mnt/hd2/home/jp/projects/tom_prop_4_sale/data/20161122_prop_for_sale_tom_classifieds.html' saved [221458]
+

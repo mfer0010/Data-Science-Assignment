@@ -1,0 +1,15 @@
+URL transformed to HTTPS due to an HSTS policy
+--2017-11-27 11:25:14--  https://www.timesofmalta.com/classifieds/property-for-sale
+Resolving www.timesofmalta.com (www.timesofmalta.com)... 104.20.177.69, 104.20.176.69
+Connecting to www.timesofmalta.com (www.timesofmalta.com)|104.20.177.69|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘/home/jp/gdrive-uom/myprojects/tom_prop_classifieds/data/20171127_prop_for_sale_tom_classifieds.html’
+
+     0K .......... .......... .......... .......... ..........  902K
+    50K .......... .......... .......... .......... .......... 2.21M
+   100K .......... .......... .......... .......... .......... 4.89M
+   150K .......... .......... ..........                       6.53M=0.09s
+
+2017-11-27 11:25:15 (1.91 MB/s) - ‘/home/jp/gdrive-uom/myprojects/tom_prop_classifieds/data/20171127_prop_for_sale_tom_classifieds.html’ saved [184572]
+
