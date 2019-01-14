@@ -30,7 +30,7 @@
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=\textwidth]{top_localities_pools}
-		\caption[Pools]{Localities Selling the most amount of Pools}
+		\caption[Pools]{Localities Selling the most Properties with Pools}
 		\label{fig::locPools}
 	\end{minipage}	
 	\hspace{0.5cm}
@@ -74,3 +74,32 @@
 \paragraph{ }Initially, tests for normality were done on the continuous variables, these tests are important as they would decide weather to use parametric tests or non-parametric tests in the future, as well as decide what kind of model to build to predict the prices of properties. In order to ensure the accuracy of the normality tests, two different tests were run; the Shapiro-Wilk normality test and the D'Agostino-Pearson omnibus test. Both these tests test the null hypothesis that the data is sampled from a normal distribution. Both these tests on both the continuous variables gave us the result that our data does not in fact come from an underlying normal distribution.
 
 \paragraph{ }After running the normality tests, a test to see if there's a significant difference in the area of the property if it has a garage was run. It was decided to use the Mann Whitney-U Test with continuity correction as this is a non-parametric alternative to the independent sample t-test which tests for a significant difference in the medians of two independent groups. The test results showed with 99\% confidence that as expected, the average area of properties with a garage was significantly larger to those without a garage. Note that more details on the test can be seen in the markdown cells in the JuPyter notebook file `03 - Statistical Analysis'.
+
+\section{The ANCOVA Regression Model}
+\paragraph{ }The ANCOVA (Analyss of Covariance) regression model is similar to the ANOVA and OLS regression models, however it caters for categorical variables as predictors as well as covariates. The equation of this model is similar to that of the ANOVA model and can be seen in equation \ref{eq::ancova}.
+\begin{equation}
+\centering
+\boldmath{y}=\mathbb{X}\boldmath{\beta}+\boldmath{\epsilon}
+\label{eq::ancova}
+\end{equation}
+Where \boldmath{$y$} is an \textit{n}-vector of independent normally distributed responses, \boldmath{$\beta$} is a \textit{p}-vector of unknown regression parameters, \boldmath{$\epsilon$} is an \textit{n}-vector of error terms whose elements are assumed to follow a standard normal distribution and $\mathbb{X}$ is an (\textit{n}x\textit{p}) matrix whose values are both real values and dummy 0-1 indicators.
+
+\paragraph{ }Similar to ANOVA regression, the equation for estimating the vector of parameters can be seen in equation \ref{eq::b}.
+\begin{equation}
+\centering
+\boldmath{\hat{\beta}}=(\mathbb{X'X})^{-1}\mathbb{X}'\boldmath{y}
+\label{eq::b}
+\end{equation}
+$\mathbb{X'X}$ has no inverse for the columns of each of the dummy variables since these are linearly dependent, thus a column from each of the dummy categorical variables must be dropped before performing the analysis, this is known as intrinsic aliasing.
+
+\paragraph{ }The following assumptions were made when using the ANCOVA regression model:
+\begin{itemize}
+	\item The response variable must have a normal distribution.
+	\item The response variable must be highly correlated with all quantitative predictors.
+	\item There shouldn't be any multicollinearity between the quantitative predictors.
+\end{itemize} 
+Note that in this case, the response variable is not normally distributed, however it was decided to use this model anyway, keeping in mind that some degree of accuracy is lost due to this. A work-around solutions to this would be to use a different GLM (General Linear Model) that transforms the response variable using a link function. It was decided not to do this however, as this would greatly increase the complexity of the model which seems beyond the scope of this task.
+
+\paragraph{ }The Model was first run to include \textit{location} as a predictor, however the majority of the coefficients turned out to not be significant, thus \textit{location} was removed and the model was built using \textit{area}, \textit{garage}, \textit{property type} and \textit{pool} as predictors. The final output shows us (from the adjusted $R^2$) value, that this model explains 62.5\% of the total variation of the dependent variable, which is what is to be expected when building models of this type.
+
+\paragraph{ }The testing set was then used to test the accuracy of the implemented model and it was found that the model was quite inaccurate overall, having an average error of \euro299,444.35, rendering the model rather useless. Some solutions to building a better model of this type are to have a larger training set and to include interaction effects to the model with the hopes of building a more robust parsimonious model.
