@@ -10,20 +10,20 @@ To start neo4j if its not running: `sudo service neo4j start`
 
 ## Import Commands
 
-`USING PERIODIC COMMIT 500
-LOAD CSV WITH HEADERS FROM "file:///articles.csv" AS csvLine
+`USING PERIODIC COMMIT 500  
+LOAD CSV WITH HEADERS FROM "file:///articles.csv" AS csvLine  
 CREATE (a:Article {key: csvLine.key, title: csvLine.title})`
 
-`USING PERIODIC COMMIT 500
-LOAD CSV WITH HEADERS FROM "file:///authors.csv" AS csvLine
+`USING PERIODIC COMMIT 500  
+LOAD CSV WITH HEADERS FROM "file:///authors.csv" AS csvLine  
 MERGE (a:Author {name: csvLine.name})`
 
-`USING PERIODIC COMMIT 500
-LOAD CSV WITH HEADERS FROM "file:///published.csv" AS csvLine
-MATCH (author:Author {name: csvLine.name}),(article:Article {key: csvLine.key})
+`USING PERIODIC COMMIT 500  
+LOAD CSV WITH HEADERS FROM "file:///published.csv" AS csvLine  
+MATCH (author:Author {name: csvLine.name}),(article:Article {key: csvLine.key})  
 CREATE (author)-[:PUBLISHED]->(article)`
 
-`USING PERIODIC COMMIT 500
-LOAD CSV WITH HEADERS FROM "file:///authors.csv" AS csvLine
-MATCH (a:Author {name: csvLine.name})
+`USING PERIODIC COMMIT 500  
+LOAD CSV WITH HEADERS FROM "file:///authors.csv" AS csvLine  
+MATCH (a:Author {name: csvLine.name})  
 SET a.university = csvLine.university`
