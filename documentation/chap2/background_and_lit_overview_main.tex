@@ -21,3 +21,94 @@
 \end{itemize}
 In particular, in the python file, \texttt{lxml} was first used to extract the required features from the xml file into three csv files (one for each node and one for the relationship). This was slightly tricky to handle due to the size of the xml file and the amount of memory available on the laptop used to run this program. Thus, a generator function was used that would access the xml file element by element rather than storing the whole file in memory. Similarly, the csv files were accessed only when needed in order to ensure that not too much memory we being used. This was a necessary step that traded speed for memory. \texttt{py2neo} was then used to access the database, set the uniqueness constraints on the desired fields in the nodes and load the csv data.
 
+\section{Some Cypher Queries}
+\paragraph{ }After loading everything on Neo4J, some queries were run in Cypher using \texttt{py2neo} to explore the dataset. In particular; the amount of \texttt{Article} nodes were counted and it was found that there are a total of 6,661,235 nodes, the amount of actual articles were counted and it was found that there are a total of 1,956,852, and the author that published the most articles was found to be H. Vincent Poor, who published 1,568 articles! The following queries were used to obtain this information:\\
+
+Count the number of \texttt{Article} nodes:
+\begin{verbatim}
+MATCH (n:Article) RETURN count(*)
+\end{verbatim}
+Count the number of articles:
+\begin{verbatim}
+MATCH (n:Article) WHERE n.key STARTS WITH `journals' 
+RETURN  count(*)
+\end{verbatim}
+Get the top 10 authors that published the most amount of articles:
+\begin{verbatim}
+MATCH (a:Author)-[p:PUBLISHED]-(:Article)
+RETURN a.name, count(p) as rel_count
+ORDER BY rel_count desc LIMIT 10
+\end{verbatim}
+
+\section{Authorship Sub-Graph}
+
+\begin{figure}[!b]
+	\centering
+	\includegraphics[width=0.6\textwidth]{cs_department}
+	\caption[Department Sub-Graph]{Authorship Sub-Graph of the CS Department at UoM}
+	\label{fig::cs_department}
+\end{figure}
+
+\paragraph{ }Figure \ref{fig::cs_department} was then extracted to show the authorship subgraph for members of the Computer Science department at the University of Malta. The list of members was taken from the department website\footnote{https://www.um.edu.mt/ict/cs/about/staff}. The following Cypher query was then used to extract the nodes as required:
+\begin{verbatim}
+MATCH (a:Author)-[p:PUBLISHED]->(b:Article)
+WHERE a.name in [`Kevin Vella',`Keith Bugeja',`Christian Colombo',
+    `Joshua Ellul',`Adrian Francalanza',`Mark Micallef',
+    `Gordon J. Pace',`Sandro Spina',`Mark Vella',
+    `Kevin Cortis']
+RETURN a,p,b
+\end{verbatim}
+The extracted table was then converted into a \texttt{pandas} data-frame and \texttt{networkx} was used to display the extracted sub-graph.
+
+\section{Shortest Paths}
+
+\begin{figure}[!b]
+	\centering
+	\includegraphics[width=0.6\textwidth]{knuth}
+	\caption[Shortest Path]{Path from Jean-Paul Ebejer to Donald E. Knuth}
+	\label{fig::knuth}
+\end{figure}
+
+
+\paragraph{ }The shortest path function in Cypher was then used to find the shortest path between two different authors. The first query was run to show one of the shortest paths that exist from Dr Jean-Paul Ebejer to Prof. Gordon Pace from the University of Malta in order to test out the function between two authors that are known to be closely connected.
+\begin{verbatim}
+MATCH (p1:Author {name:'Jean-Paul Ebejer'}),
+    (p2:Author {name:'Gordon J. Pace'}),
+    path = shortestpath((p1)-[:PUBLISHED*]-(p2))
+RETURN path
+\end{verbatim}
+The second query was then run to find the shortest path between Jean-Paul Ebejer and Donald E. Knuth.
+\begin{verbatim}
+MATCH (p1:Author {name:'Jean-Paul Ebejer'}),
+    (p2:Author {name:'Donald E. Knuth'}),
+    path = shortestpath((p1)-[:PUBLISHED*]-(p2))
+RETURN path
+\end{verbatim}
+It was found that a connection actually does exist between these two authors and the path returned can be seen in figure \ref{fig::knuth}.
+
+\section{Erd\H{o}s Numbers}
+
+\begin{figure}[!b]
+	\centering
+	\includegraphics[width=\textwidth]{erdos}
+	\caption[Erd\H{o}s Numbers]{Erd\H{o}s Numbers for members of the Faculty of ICT at UoM}
+	\label{fig::erdos}
+\end{figure}
+
+\paragraph{ }A function was then written to extract the Erd\H{o}s Number of a given author. The function made use of the following query (where \texttt{NAME} refers to the author name passed to the function):
+\begin{verbatim}
+MATCH (p1:Author {name: NAME}),
+    (p2:Author {name:'Paul Erd&#246;s'}),
+    path = shortestpath((p1)-[:PUBLISHED*]-(p2))
+RETURN length(path)
+\end{verbatim} 
+The Erd\H{o}s Number of Dr. Jean-Paul Ebejer was then found to be 4. Finally, figure \ref{fig::erdos} was plotted to show the Erd\H{o}s Numbers of the members of the Faculty of ICT at UoM. Note that the members of the faculty were taken from each department's website. A histogram was also plotted for the Erd\H{o}s numbers to further show the distribution of these values and can be seen in figure \ref{fig::hist_erdos}.
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=0.6\textwidth]{erdos_hist}
+	\caption[Erd\H{o}s Numbers Histogram]{ Histogram of Erd\H{o}s Numbers for members of the Faculty of ICT at UoM}
+	\label{fig::hist_erdos}
+\end{figure}
+
+\section{Six Degrees of Separation}
