@@ -10,19 +10,19 @@
 	\label{fig::model}
 \end{figure}
 
-\paragraph{ }The \texttt{Author} node simply contains the name of the author. This field was also set as the key since according to the documentation of \texttt{dblp} the name is stored in a way which is guaranteed to be unique. The \texttt{Article} Node, despite its misleading name, stores data on any of the publications listed in the \texttt{bdlp} dataset. This includes articles,articles in proceedings, proceedings, books, articles in collections, PhD thesis, Masters thesis and publications from web sources. These nodes have 2 fields; a key field which contains the unique key identifier assigned to them in the \texttt{dblp} database and the title field containing the name of the publication. Finally, the relationship \texttt{PUBLISHED} contains no fields as it wasn't necessary.
+\paragraph{ }The \texttt{Author} node simply contains the name of the author. This field was also set as the key since according to the documentation of \texttt{dblp} the name is stored in a way which is guaranteed to be unique. The \texttt{Article} Node, despite its misleading name, stores data on any of the publications listed in the \texttt{dblp} dataset. This includes articles,articles in proceedings, proceedings, books, articles in collections, PhD thesis, Masters thesis and publications from web sources. These nodes have 2 fields; a key field which contains the unique key identifier assigned to them in the \texttt{dblp} database and the title field containing the name of the publication. Finally, the relationship \texttt{PUBLISHED} contains no fields as it wasn't necessary.
 
 \paragraph{ }In order to import the data into Neo4J, the following steps were done:
 \begin{itemize}
 	\item Firstly, Neo4J was installed on the local machine. The command \texttt{sudo service neo4j status} was used to check the status of the server and since it was inactive \texttt{sudo service neo4j start} was used to start the server.
 	\item The Jupyter Notebook code in `01 - Data Extraction.ipynb' was run to create the data files.
 	\item The generated data files were then copied to the Neo4J import directory by running \texttt{sudo cp [file.csv] /var/lib/neo4j/import/[file.csv]} .
-	\item Finally, some quotes found in titles of the publications were removed by running \texttt{sudo sed -i 's/\"//g' articles.csv}
+	\item Finally, some quotes found in titles of the publications were removed by running \texttt{sudo sed -i `s/\textbackslash"//g' articles.csv}
 \end{itemize}
 In particular, in the python file, \texttt{lxml} was first used to extract the required features from the xml file into three csv files (one for each node and one for the relationship). This was slightly tricky to handle due to the size of the xml file and the amount of memory available on the laptop used to run this program. Thus, a generator function was used that would access the xml file element by element rather than storing the whole file in memory. Similarly, the csv files were accessed only when needed in order to ensure that not too much memory we being used. This was a necessary step that traded speed for memory. \texttt{py2neo} was then used to access the database, set the uniqueness constraints on the desired fields in the nodes and load the csv data.
 
 \section{Some Cypher Queries}
-\paragraph{ }After loading everything on Neo4J, some queries were run in Cypher using \texttt{py2neo} to explore the dataset. In particular; the amount of \texttt{Article} nodes were counted and it was found that there are a total of 6,661,235 nodes, the amount of actual articles were counted and it was found that there are a total of 1,956,852, and the author that published the most articles was found to be H. Vincent Poor, who published 1,568 articles! The following queries were used to obtain this information:\\
+\paragraph{ }After loading everything in Neo4J, some queries were run in Cypher using \texttt{py2neo} to explore the dataset. In particular; the amount of \texttt{Article} nodes were counted and it was found that there are a total of 6,661,235 nodes, the amount of actual articles were counted and it was found that there are a total of 1,956,852, and the author that published the most articles was found to be H. Vincent Poor, who published 1,568 articles! The following queries were used to obtain this information:\\
 
 Count the number of \texttt{Article} nodes:
 \begin{verbatim}
@@ -72,15 +72,15 @@ The extracted table was then converted into a \texttt{pandas} data-frame and \te
 
 \paragraph{ }The shortest path function in Cypher was then used to find the shortest path between two different authors. The first query was run to show one of the shortest paths that exist from Dr Jean-Paul Ebejer to Prof. Gordon Pace from the University of Malta in order to test out the function between two authors that are known to be closely connected.
 \begin{verbatim}
-MATCH (p1:Author {name:'Jean-Paul Ebejer'}),
-    (p2:Author {name:'Gordon J. Pace'}),
+MATCH (p1:Author {name:`Jean-Paul Ebejer'}),
+    (p2:Author {name:`Gordon J. Pace'}),
     path = shortestpath((p1)-[:PUBLISHED*]-(p2))
 RETURN path
 \end{verbatim}
 The second query was then run to find the shortest path between Jean-Paul Ebejer and Donald E. Knuth.
 \begin{verbatim}
-MATCH (p1:Author {name:'Jean-Paul Ebejer'}),
-    (p2:Author {name:'Donald E. Knuth'}),
+MATCH (p1:Author {name:`Jean-Paul Ebejer'}),
+    (p2:Author {name:`Donald E. Knuth'}),
     path = shortestpath((p1)-[:PUBLISHED*]-(p2))
 RETURN path
 \end{verbatim}
@@ -98,11 +98,11 @@ It was found that a connection actually does exist between these two authors and
 \paragraph{ }A function was then written to extract the Erd\H{o}s Number of a given author. The function made use of the following query (where \texttt{NAME} refers to the author name passed to the function):
 \begin{verbatim}
 MATCH (p1:Author {name: NAME}),
-    (p2:Author {name:'Paul Erd&#246;s'}),
+    (p2:Author {name:`Paul Erd&#246;s'}),
     path = shortestpath((p1)-[:PUBLISHED*]-(p2))
 RETURN length(path)
 \end{verbatim} 
-The Erd\H{o}s Number of Dr. Jean-Paul Ebejer was then found to be 4. Finally, figure \ref{fig::erdos} was plotted to show the Erd\H{o}s Numbers of the members of the Faculty of ICT at UoM. Note that the members of the faculty were taken from each department's website. A histogram was also plotted for the Erd\H{o}s numbers to further show the distribution of these values and can be seen in figure \ref{fig::hist_erdos}.
+The Erd\H{o}s Number of Dr. Jean-Paul Ebejer was then found to be 4. Figure \ref{fig::erdos} was then plotted to show the Erd\H{o}s Numbers of the members of the Faculty of ICT at UoM. Note that the members of the faculty were taken from each department's website. A histogram was also plotted for the Erd\H{o}s numbers to further show the distribution of these values and can be seen in figure \ref{fig::hist_erdos}.
 
 \begin{figure}[!t]
 	\centering
@@ -112,3 +112,28 @@ The Erd\H{o}s Number of Dr. Jean-Paul Ebejer was then found to be 4. Finally, fi
 \end{figure}
 
 \section{Six Degrees of Separation}
+\paragraph{ }The six degrees of separation concept states that all living things are six or fewer steps away from each other. In order to apply this to the \texttt{dblp} dataset and check if this statement holds up in this case too, the Erd\H{o}s Number Function was used in order to check if all authors have an Erd\H{o}s number of six or less. A sample of 1,000 authors was taken by randomly sampling the list of author IDs. Each author's Erd\H{o}s number was then calculated and figure \ref{fig::six_degrees} was plotted.
+
+\begin{figure}[!b]
+	\centering
+	\includegraphics[width=0.6\textwidth]{erdos_hist02}
+	\caption[Erd\H{o}s Numbers Histogram 2]{ Histogram of Erd\H{o}s Numbers for the Randomly Selected Sample of 1,000 Authors}
+	\label{fig::six_degrees}
+\end{figure}
+
+\paragraph{ }As can be seen in figure \ref{fig::six_degrees}, not all authors are connected to Paul Erd\H{o}s in six steps or less, however the vast majority are. In fact, for this particular sample, the average Erd\H{o}s number was found to be 4.7. Thus, although not all authors are connected to Paul Erd\H{o}s in six steps or less, the six degrees of separation concept hods up on average and it can be concluded that the majority of authors have an Erd\H{o}s number of 6 or less.
+
+\section{Relational DBMS}
+\paragraph{ }In order to store this data in a relational DBMS using a similar model, 3 tables would be needed; an author table, an article table and a published table. This would work in a similar way to the nodes and relationships of the graph database where the author table would store all the details of the authors, the article table would store all the details or the articles and the published table would link the primary keys of the other two tables to form the many-to-many relationship required.
+
+\paragraph{ }An advantage of using a relational database over a graph database is that relational databases have been the go-to method of storing data for a while, thus there are many research papers written on these and one can find information on running queries and ways to store data properly very easily. Also, anyone with basic knowledge in computing will be able access and use a relational database as its easily accessible with software packages such as Microsoft Access.
+
+\paragraph{ }Furthermore, relational databases use the ACID model which ensures:
+\begin{itemize}
+	\item Atomicity: where everything in a transaction must succeed in order to be implemented.
+	\item Consistency: where a transaction will only leave the database if it is consistent with the data.
+	\item Isolation: which ensures proper concurrent transaction handling.
+	\item Durability: where transactions that are completed are persistent and will be there if the server needs restarting.
+\end{itemize}
+
+\paragraph{ }When using relational databases however, due to the fact that a \textit{JOIN} operation must match the primary and foreign keys of all the entities in a table, these are computationally and memory intensive and thus have exponential cost. This is especially bad for many-to-many relationships such as the \textit{published} relationship being used in this model as the published table would increase further the cost of the \textit{JOIN} operation. Graph databases were designed with this disadvantage in mind, ensuring that the connections are clear, where each node stores a list of all the connections in it, thus the \textit{JOIN} operations are not needed. This however comes at the cost of memory as a node with many connections will take up more memory than one with no connections at all.

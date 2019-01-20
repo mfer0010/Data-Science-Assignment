@@ -5,10 +5,10 @@
 
 \paragraph{ }The data collected is simply the \textit{html} code used to display the web page. This is available to anyone that has access to the website, thus anyone can have access to this data given the page was accessed on the specified date. Since anyone can book a classified advert on \textit{Times of Malta}, there is no guarantee that the information is correct or accurate, thus we cannot be certain that the prices of the properties listed on the classified page reflect the true market value of property in Malta set by experts in the field. However, this could still give us a good indication of the trend. 
 
-\paragraph{ }With regards to data quality, the data provided is not complete as not all listings have information on the area of the house, whether or not the house has a garage or information on the type of property. However, from glancing at the raw data, it would seem that all entries have data on the location and price of the property. Since the data is extracted from the same system it must be consistent. Finally, when doing a study on the current property situation in Malta, data from 2015, 2016 or even 2017 will not be relevant or timely as the property marked has changed drastically in these past years in Malta. 
+\paragraph{ }With regards to data quality, the data provided is not complete as not all listings have information on the area of the house, whether or not the house has a garage or information on the type of property. However, from glancing at the raw data, it would seem that the majority of entries have data on the location and price of the property. Since the data is extracted from the same system it must be consistent. Finally, when doing a study on the current property situation in Malta, data from 2015, 2016 or even 2017 will not be relevant or timely as the property marked has changed drastically in these past years in Malta. 
 
 \section{Features of Interest}
-\paragraph{ }The features of interest from the raw data were extracted with the task in mind of building a predictive model that would predict the expected price of the property given several features. Thus a sample was chosen from the provided dataset, in particular data from the beginning of August, September and October was chosen since these would reflect most accurately the current prices in the property market. 
+\paragraph{ }The features of interest from the raw data were extracted with the task in mind of building a predictive model that would predict the expected price of the property given several features. Thus, a sample was chosen from the provided dataset. In particular, datasets from the beginning of August, September and October were chosen since these would reflect most accurately the current prices in the property market. 
 \begin{itemize}
 	\item \underline{Property ID}: This will be extracted from the \textit{name} variable in the \textit{html} code in order to have a unique ID referencing each entry.
 	\item \underline{Location}: This categorical variable will store the location of the property. Since the price of property depends on the location, this would make a good predictor for the model.
@@ -24,7 +24,7 @@
 \section{Some Interesting Results}
 \paragraph{ }Following some analysis on the extracted data, some interesting statements were initially made. Note that at this stage no statistical tests were done as this would be done later on in the analysis.
 
-\paragraph{ }The first interesting conclusion was made on data to do with properties having pools. Firstly, the average value of properties with pools seems to be significantly larger than those without pools (as expected). In fact the average value of a property with a pool (regardless of location or size) was found to be \euro 818,616.07 while the average value of a property without a pool was found to be \euro 342,582. Furthermore, as can be seen in Figure \ref{fig::locPools}, at the time of the study, the locality selling the most properties with pools was Zejtun. 
+\paragraph{ }The first interesting conclusion was made on data to do with properties having pools. Firstly, the average value of properties with pools seems to be significantly larger than those without pools (as expected). In fact the average value of a property with a pool (regardless of location or size) was found to be \euro 818,616.07 while the average value of a property without a pool was found to be \euro 342,582. Furthermore, as can be seen in figure \ref{fig::locPools}, at the time of the study, the locality selling the most properties with pools was Zejtun. 
 
 \begin{figure}[!b]
 	\begin{minipage}[b]{0.45\linewidth}
@@ -42,11 +42,11 @@
 	\end{minipage}	
 \end{figure}
 
-\paragraph{ }Another interesting result found during the data exploration stage was that currently on the market, Sliema is the locality that has the larges number of properties for sale. The top 10 localities selling properties can be seen in Figure \ref{fig::toplocalities}.
+\paragraph{ }Another interesting result found during the data exploration stage was that currently on the market, Sliema is the locality that has the larges number of properties for sale. The top 10 localities selling properties can be seen in figure \ref{fig::toplocalities}.
 
 \paragraph{ }One of the questions that would be interesting to look at was \textit{``which locality has the most expensive land?"}. In order to answer this, the price per square meter of land for each property on the market was worked out by dividing the price by the area. The average was then worked out for each locality using the \textit{groupby} function and it was concluded that the most expensive land on the market right now is in Pender Gardens with an average of \euro 21,818.18 per square meter! Note that at this stage, properties with less than 35 square meters of land were removed as they were considered to be outliers.
 
-\paragraph{ }The last interesting conclusion was made when analysing the property types. In general, as expected, the most expensive property type for sale was found to be the block of apartments which have an average price of \euro1,414,214. However it was interesting to note from looking at the density plots for the prices of apartments and houses (Figure \ref{fig::densities}) that prices for houses have greater variability than those of apartments. 
+\paragraph{ }The last interesting conclusion was made when analysing the property types. In general, as expected, the most expensive property type for sale was found to be the block of apartments which have an average price of \euro1,414,214. However it was interesting to note from looking at the density plots for the prices of apartments and houses (figure \ref{fig::densities}) that prices for houses have greater variability than those of apartments. 
 
 \begin{figure}[!t]
 	\begin{minipage}[b]{0.45\linewidth}
@@ -66,7 +66,7 @@
 
 
 \section{Identifying a Correlation}
-\paragraph{ }The two variables that would seem to have an obvious correlation would be \textit{price} and \textit{area}. As the area of the land increases we would expect the price to increase too. In fact, having a quick look at the scatter plot in Figure \ref{fig::correlation} (after limiting the x-axis to remove some outliers) seems to confirm this. The outliers are points that are affected by the locality, it's obviously important not to remove these when building the model as the locality will be a key feature in the model.
+\paragraph{ }The two variables that would seem to have an obvious correlation would be \textit{price} and \textit{area}. As the area of the land increases we would expect the price to increase too. In fact, having a quick look at the scatter plot in figure \ref{fig::correlation} (after limiting the x-axis to remove some outliers) seems to confirm this. The outliers are points that are affected by the locality, it's obviously important not to remove these when building the model as the locality will be a key feature in the model.
 
 \paragraph{ }A Pearson correlation test was then run and the data was found to have a correlation coefficient of 0.4861. The p-value of the test was found to be 1.84252e-15 which is less than 0.01, thus we are 99\% confident that the value is significant.
 

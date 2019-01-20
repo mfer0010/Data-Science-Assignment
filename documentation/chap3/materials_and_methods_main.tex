@@ -1,10 +1,10 @@
 \chapter{Data Extraction and Visualization - EU Stats}
 
 \section{Introduction and the Datasets Chosen}
-\paragraph{ }The datasets used for this task were both taken from the Eurostat portal. Links to download the data can be found in the `README' text file found in the data folder provided for this task. The data chosen where Malta ranks surprisingly well is that of the number of healthy life years. According to the eurostat website, healthy life years measures the number of years that a person at birth is still expected to live in a healthy condition. The data chosen were Malta ranks surprisingly bad is the employment rate data, specifically the female employment rate.
+\paragraph{ }The datasets used for this task were both taken from the Eurostat portal. Links to download the data can be found in the `README' text file found in the data folder provided for this task. The dataset chosen where Malta ranks surprisingly well is that of the number of healthy life years. According to the eurostat website, healthy life years measures the number of years that a person at birth is still expected to live in a healthy condition. The dataset chosen were Malta ranks surprisingly badly is the employment rate data, specifically the female employment rate.
 
 \section{Healthy Life Years}
-\paragraph{ }Since 2006, the number of healthy life years has increased from 69.5 years to 72.4 years for females and from 68.3 years to 71.1 years for Males, however this increase has not been linear. In fact, when looking at Figure \ref{fig::hly_timeseries} we can note that the number of healthy life years in Malta peaked for both males and females in 2015. Since 2015, the healthy life years for females has dropped by by 2.2 years while that of males has dropped by 1.5 years. An interesting study would be to determine the source of this decrease and to answer the question \textit{``Will this value continue to decrease in the future?"} 
+\paragraph{ }Since 2006, the number of healthy life years has increased from 69.5 years to 72.4 years for females and from 68.3 years to 71.1 years for Males, however this increase has not been linear. In fact, when looking at figure \ref{fig::hly_timeseries} we can note that the number of healthy life years in Malta peaked for both males and females in 2015. Since 2015, the healthy life years for females has dropped by by 2.2 years while that of males has dropped by 1.5 years. An interesting study would be to determine the source of this decrease and to answer the question \textit{``Will this value continue to decrease in the future?"} 
 
 \paragraph{ }Surprisingly, when comparing the Maltese Data to the rest of the EU, Malta ranked the second best in 2016 when it comes to healthy life years, being only beaten by Sweden with an average healthy life years value of 73.15 years (where Malta's average healthy life years value is 71.75). Figure \ref{fig::hly_bar} shows the top 10 countries in the EU with the highest healthy life years expected value.
 
@@ -25,7 +25,7 @@
 \end{figure}  
 
 \section{Employment Rate}
-\paragraph{ }Sine 2005, the employment rate in Malta has been on a nearly constant increase, having only dipped slightly in 2009. In particular when looking at the time series plot for the employment rate in Malta (Figure \ref{fig::er_timeseries}) we can note that since 2009, female employment rate has increased significantly. The rate of this change has also increased but although this is a positive step in the right direction, these numbers are not too good when compared to other EU States. In fact, as can be seen in Figure \ref{fig::er_bar}, Malta ranks in the top 10 worst countries for female employment rate!
+\paragraph{ }Sine 2005, the employment rate in Malta has been on a nearly constant increase, having only dipped slightly in 2009. In particular when looking at the time series plot for the employment rate in Malta (figure \ref{fig::er_timeseries}) we can note that since 2009, female employment rate has increased significantly. The rate of this change has also increased but although this is a positive step in the right direction, these numbers are not too good when compared to other EU States. In fact, as can be seen in figure \ref{fig::er_bar}, Malta ranks in the top 10 worst countries for female employment rate!
 
  \begin{figure}[!b]
  	\begin{minipage}[b]{0.45\linewidth}
@@ -43,7 +43,7 @@
  	\end{minipage}	
  \end{figure}  
 
-\paragraph{ }The geovisualization plot seen in Figure \ref{fig::geoviz} shows the female employment rates in the EU states for 2017.
+\paragraph{ }The geovisualization plot seen in figure \ref{fig::geoviz} shows the female employment rates in the EU states for 2017.
 \begin{figure}[!t]
 	\centering
 	\includegraphics[width=0.8\textwidth]{geoviz}
@@ -58,13 +58,13 @@
 	\caption[Bad Visualization]{Bad Visualization taken from Malta Independent}
 	\label{fig::badviz}
 \end{figure}
-\paragraph{ }The bad visualization from local media was taken from a \textit{Malta Independent} article published on Sunday 2nd December 2018 titled ``Determinants: What is causing the rise in property prices?" and can be seen in Figure \ref{fig::badviz}. The most glaring issue with this plot is the fact that it is represented as a cumulative bar chart where each category's bar starts from the top of the prior category's bar. This is not an ideal visualisation as it makes it very difficult to compare the categories' contribution to GDP growth. Furthermore, it gives the impression that the order of the categories is important and in this case, the order is simply random. The graph even does a bad job at showing that all these categories add up to 8.5\% of the GDP growth as the y-axis has no label and there are no grid lines to help in reading the values presented.
+\paragraph{ }The bad visualization from local media was taken from a \textit{Malta Independent} article published on Sunday 2nd December 2018 titled ``Determinants: What is causing the rise in property prices?" and can be seen in figure \ref{fig::badviz}. The most glaring issue with this plot is the fact that it is represented as a cumulative bar chart where each category's bar starts from the top of the prior category's bar. This is not an ideal visualisation as it makes it very difficult to compare the categories' contribution to GDP growth. Furthermore, it gives the impression that the order of the categories is important and in this case, the order is simply random. The graph even does a bad job at showing that all these categories add up to 8.5\% of the GDP growth as the y-axis has no label and there are no grid lines to help in reading the values presented.
 
-\begin{figure}[!t]
+\begin{figure}[!b]
 	\centering
 	\includegraphics[width=0.7\textwidth]{contributions_to_gdp_growth}
 	\caption[Improved Plot]{Contributions to GDP Growth}
 	\label{fig::fixed}
 \end{figure}
 
-\paragraph{ }The improved plot can be seen in Figure \ref{fig::fixed}. All the issues addressed in the prior paragraph have been sorted out.  
+\paragraph{ }The improved plot can be seen in figure \ref{fig::fixed}. All the issues addressed in the prior paragraph have been sorted out.  
